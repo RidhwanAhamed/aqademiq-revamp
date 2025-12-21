@@ -6,10 +6,9 @@ import { ThemeToggle } from "../ThemeToggle";
 import { Button } from "../ui/button";
 
 const navLinks = [
-  { name: "Features", href: "#features" },
-  { name: "How It Works", href: "#how-it-works" },
-  { name: "Pricing", href: "#pricing" },
-  { name: "About", href: "#about" },
+  { name: "Features", href: "/features" },
+  { name: "Why Aqademiq", href: "/why-aqademiq" },
+  { name: "About", href: "/about" },
 ];
 
 export function Header() {
@@ -62,13 +61,13 @@ export function Header() {
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center gap-1">
           {navLinks.map((link) => (
-            <a
+            <Link
               key={link.name}
-              href={link.href}
+              to={link.href}
               className="px-4 py-2 text-body-sm font-medium text-muted-foreground hover:text-foreground transition-colors link-underline"
             >
               {link.name}
-            </a>
+            </Link>
           ))}
         </div>
 
@@ -113,14 +112,14 @@ export function Header() {
       >
         <div className="container-marketing py-4 space-y-1">
           {navLinks.map((link) => (
-            <a
+            <Link
               key={link.name}
-              href={link.href}
+              to={link.href}
               onClick={() => setMobileMenuOpen(false)}
               className="block px-4 py-3 rounded-lg text-body-md font-medium text-muted-foreground hover:text-foreground hover:bg-muted transition-colors"
             >
               {link.name}
-            </a>
+            </Link>
           ))}
           <div className="pt-4 flex flex-col gap-2">
             <Button variant="outline" className="w-full justify-center">
