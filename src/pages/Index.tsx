@@ -1,5 +1,14 @@
 import { Header, Footer, PageLayout } from "@/components/layout";
-import { HeroSection, FeaturesSection, CTASection } from "@/components/sections";
+import { 
+  HeroSection, 
+  SocialProofSection,
+  ValuePropsSection,
+  HowItWorksSection,
+  ProductShowcaseSection,
+  TestimonialsSection,
+  FAQSection,
+  FinalCTASection 
+} from "@/components/sections";
 
 const Index = () => {
   return (
@@ -7,8 +16,13 @@ const Index = () => {
       <Header />
       <main>
         <HeroSection />
-        <FeaturesSection />
-        <CTASection />
+        <SocialProofSection />
+        <ValuePropsSection />
+        <HowItWorksSection />
+        <ProductShowcaseSection />
+        <TestimonialsSection />
+        <FAQSection />
+        <FinalCTASection />
       </main>
       <Footer />
     </PageLayout>
