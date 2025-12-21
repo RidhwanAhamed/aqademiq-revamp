@@ -1,3 +1,10 @@
 export { HeroSection } from "./HeroSection";
 export { FeaturesSection } from "./FeaturesSection";
 export { CTASection } from "./CTASection";
+export { SocialProofSection } from "./SocialProofSection";
+export { ValuePropsSection } from "./ValuePropsSection";
+export { HowItWorksSection } from "./HowItWorksSection";
+export { ProductShowcaseSection } from "./ProductShowcaseSection";
+export { TestimonialsSection } from "./TestimonialsSection";
+export { FAQSection } from "./FAQSection";
+export { FinalCTASection } from "./FinalCTASection";
