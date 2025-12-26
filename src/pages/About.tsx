@@ -19,22 +19,22 @@ const values = [
   {
     icon: Heart,
     title: "Student-First Design",
-    description: "Every feature is designed with real student needs in mind. We listen, learn, and iterate based on your feedback.",
+    description: "Every feature is designed with real student needs in mind—especially those who procrastinate or feel overwhelmed. We listen, learn, and iterate.",
   },
   {
     icon: Target,
     title: "Sustainable Success",
-    description: "We believe in helping students achieve their goals without burning out. Balance and well-being come first.",
+    description: "We believe in helping students achieve their goals without burning out. Balance and mental health come first, always.",
   },
   {
     icon: Users,
-    title: "Inclusive by Default",
-    description: "Built for diverse learners including neurodivergent students. Accessibility isn't an afterthought.",
+    title: "Designed for Diverse Minds",
+    description: "Built for how your brain actually works—ADHD spirals, anxiety loops, sensory sensitivities. Accessibility isn't an afterthought; it's the foundation.",
   },
   {
     icon: Zap,
-    title: "Innovation with Purpose",
-    description: "AI and technology should serve you, not overwhelm you. Every feature has a clear, meaningful purpose.",
+    title: "Research-Backed, Not Marketing-Backed",
+    description: "Every feature is grounded in procrastination research and behavioral psychology. No gimmicks, no productivity theater—just tools that work.",
   },
 ];
 
@@ -82,14 +82,14 @@ export default function About() {
                 </div>
                 <h1 className="text-display-lg md:text-display-xl text-foreground mb-6">
                   Helping students study{" "}
-                  <span className="text-gradient">sustainably</span>
+                  <span className="text-gradient">sustainably with AI</span>
                 </h1>
                 <p className="text-body-lg text-muted-foreground mb-6">
-                  We're on a mission to help students achieve their academic goals without sacrificing their well-being. 
-                  Aqademiq combines AI-powered planning with a philosophy of sustainable studying—not just grinding harder.
+                  We're on a mission to help students achieve their academic goals without sacrificing their mental health. 
+                  Aqademiq combines AI-powered planning rooted in behavioral psychology—not just grinding harder, but studying smarter.
                 </p>
                 <p className="text-body-lg text-muted-foreground">
-                  Founded by students, for students. We understand the chaos of academic life because we've lived it.
+                  Founded by students who procrastinate, for students who procrastinate. We understand that the problem isn't laziness—it's planning, decision fatigue, and sensory overload. We solve all three.
                 </p>
               </motion.div>
 
@@ -144,8 +144,8 @@ export default function About() {
                 Our Mission
               </h2>
               <p className="text-body-xl text-muted-foreground leading-relaxed mb-8">
-                "To empower every student with AI-driven tools that make academic planning effortless, 
-                so they can focus on what truly matters—learning, growing, and thriving."
+                "To empower every student with AI-driven tools rooted in behavioral psychology—making academic planning effortless 
+                so you can focus on learning, not managing apps. Built for how your brain actually works."
               </p>
               <div className="flex justify-center gap-8 text-center">
                 <div>

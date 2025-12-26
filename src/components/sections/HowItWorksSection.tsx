@@ -6,20 +6,20 @@ const steps = [
   {
     number: "01",
     icon: Upload,
-    title: "Plug in your courses",
-    description: "Import your syllabus, sync your calendar, and add your commitments. Takes 2 minutes.",
+    title: "Connect Your School",
+    description: "Plug in your university and course list. Aqademiq syncs all your deadlines and course schedule. (2 minutes)",
   },
   {
     number: "02",
     icon: MessageSquare,
-    title: "Tell Ada your goals",
-    description: "Share how you like to study, your ideal work hours, and what grades you're aiming for.",
+    title: "Tell Ada About You",
+    description: "How do you study best? Do deadlines stress you out? Are notifications overwhelming? Ada asks 3 quick questions to personalize your plan. (2 minutes)",
   },
   {
     number: "03",
     icon: Zap,
-    title: "Get a live plan",
-    description: "Receive a personalized schedule that adapts every week based on your progress and habits.",
+    title: "Get Your Week Plan",
+    description: "Boom. Your semester unfolds week by week. Each day shows exactly what to focus on—no overwhelm, no decision paralysis. Ada adapts it as your courses evolve. (1 minute)",
   },
 ];
 
@@ -44,11 +44,11 @@ export function HowItWorksSection() {
             <span>Simple Setup</span>
           </div>
           <h2 className="text-display-md md:text-display-lg text-foreground mb-4">
-            Get started in{" "}
-            <span className="text-gradient">3 easy steps</span>
+            From Procrastination to Plan in{" "}
+            <span className="text-gradient">5 Minutes</span>
           </h2>
           <p className="text-body-lg text-muted-foreground">
-            From signup to your first personalized schedule in under 5 minutes.
+            Most students go from "I'm so behind" to "I have a real plan" before their next class. That's the Aqademiq effect.
           </p>
         </motion.div>
 

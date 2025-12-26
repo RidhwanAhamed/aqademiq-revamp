@@ -3,31 +3,31 @@ import { Quote, Star } from "lucide-react";
 
 const testimonials = [
   {
-    quote: "I went from constantly missing deadlines to finishing assignments early. Ada's reminders are a game-changer.",
-    name: "Sarah Chen",
-    role: "Computer Science, Stanford",
-    avatar: "SC",
+    quote: "I have ADHD and I was constantly juggling five apps. Now everything's in one place and Ada's suggestions actually make sense. I stopped procrastinating because I don't have decision paralysis anymore.",
+    name: "Alex",
+    role: "CS Student",
+    avatar: "A",
     rating: 5,
   },
   {
-    quote: "The smart scheduling actually understands when I'm productive. I've never felt more in control of my semester.",
-    name: "Marcus Johnson",
-    role: "Pre-Med, Harvard",
-    avatar: "MJ",
+    quote: "I used to refresh my grades portal every hour out of anxiety. Now I check Aqademiq once and I trust the plan. My stress dropped so much.",
+    name: "Jordan",
+    role: "Pre-med",
+    avatar: "J",
     rating: 5,
   },
   {
-    quote: "Reduced my anxiety about coursework by 80%. I finally know exactly what I need to do each day.",
-    name: "Emma Williams",
-    role: "Economics, Oxford",
-    avatar: "EW",
+    quote: "The low-distraction mode saved me. No notifications I didn't ask for, no overwhelming colors. I can actually focus for more than 5 minutes.",
+    name: "Casey",
+    role: "Design Student",
+    avatar: "C",
     rating: 5,
   },
   {
-    quote: "The weekly reflections helped me identify that I was overcommitting. Now I have time for both studies and life.",
-    name: "David Park",
-    role: "Engineering, MIT",
-    avatar: "DP",
+    quote: "Used to procrastinate until midnight. Now Aqademiq breaks assignments into bite-sized tasks. I actually start early.",
+    name: "Sam",
+    role: "Business Student",
+    avatar: "S",
     rating: 5,
   },
 ];
@@ -70,11 +70,11 @@ export function TestimonialsSection() {
             <span>Student Stories</span>
           </div>
           <h2 className="text-display-md md:text-display-lg text-foreground mb-4">
-            Loved by students{" "}
-            <span className="text-gradient">everywhere</span>
+            Real students, real{" "}
+            <span className="text-gradient">behavior change</span>
           </h2>
           <p className="text-body-lg text-muted-foreground">
-            See how Aqademiq is helping students reduce stress, stay consistent, and achieve their academic goals.
+            From ADHD spirals to anxiety loops to sensory overload—see how Aqademiq helps students actually finish what they start.
           </p>
         </motion.div>
 

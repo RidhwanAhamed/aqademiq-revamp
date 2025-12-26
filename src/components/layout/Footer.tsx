@@ -48,7 +48,7 @@ export function Footer() {
               <span className="text-xl font-bold text-gradient">Aqademiq</span>
             </Link>
             <p className="text-body-sm text-muted-foreground max-w-xs mb-6">
-              AI-powered academic planning that transforms chaos into clarity. Built for students who want to focus on what matters.
+              AI-powered academic planning built on behavioral psychology. Designed for students who procrastinate, with accessibility features neurodivergent students love.
             </p>
             <div className="flex gap-3">
               {socialLinks.map((social) => (
