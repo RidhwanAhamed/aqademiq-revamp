@@ -1,5 +1,15 @@
 import { motion, useReducedMotion } from "framer-motion";
-import { ArrowRight, Play, Calendar, CheckCircle2, MessageSquare, Sparkles, Clock, Brain, ChevronRight } from "lucide-react";
+import {
+  ArrowRight,
+  Play,
+  Calendar,
+  CheckCircle2,
+  MessageSquare,
+  Sparkles,
+  Clock,
+  Brain,
+  ChevronRight,
+} from "lucide-react";
 import { Button } from "../ui/button";
 
 const easeOutExpo = [0.19, 1, 0.22, 1] as const;
@@ -47,24 +57,32 @@ export function HeroSection() {
       <div className="absolute inset-0 -z-10">
         {/* Animated gradient orbs */}
         <motion.div
-          animate={shouldReduceMotion ? {} : { 
-            scale: [1, 1.1, 1],
-            opacity: [0.15, 0.25, 0.15],
-          }}
+          animate={
+            shouldReduceMotion
+              ? {}
+              : {
+                  scale: [1, 1.1, 1],
+                  opacity: [0.15, 0.25, 0.15],
+                }
+          }
           transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
           className="absolute top-20 left-[15%] w-[500px] h-[500px] bg-primary/20 rounded-full blur-[120px]"
         />
         <motion.div
-          animate={shouldReduceMotion ? {} : { 
-            scale: [1, 1.15, 1],
-            opacity: [0.1, 0.2, 0.1],
-          }}
+          animate={
+            shouldReduceMotion
+              ? {}
+              : {
+                  scale: [1, 1.15, 1],
+                  opacity: [0.1, 0.2, 0.1],
+                }
+          }
           transition={{ duration: 10, repeat: Infinity, ease: "easeInOut", delay: 2 }}
           className="absolute bottom-0 right-[10%] w-[400px] h-[400px] bg-accent/15 rounded-full blur-[100px]"
         />
-        
+
         {/* Subtle grid pattern */}
-        <div 
+        <div
           className="absolute inset-0 opacity-[0.02] dark:opacity-[0.04]"
           style={{
             backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23000000' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
@@ -82,18 +100,27 @@ export function HeroSection() {
             className="text-center lg:text-left"
           >
             {/* Headline */}
-            <motion.h1 variants={itemVariants} className="text-display-lg md:text-display-xl lg:text-display-2xl text-foreground mb-6 leading-tight">
-              Procrastination is a planning problem.{" "}
-              <span className="text-gradient">Aqademiq is the solution.</span>
+            <motion.h1
+              variants={itemVariants}
+              className="text-display-lg md:text-display-xl lg:text-display-2xl text-foreground mb-6 leading-tight"
+            >
+              Stop procrastinating. Start studying <span className="text-gradient">smarter with Ada.</span>
             </motion.h1>
 
             {/* Subheadline */}
-            <motion.p variants={itemVariants} className="text-body-lg text-muted-foreground max-w-xl mx-auto lg:mx-0 mb-8">
-              Research shows AI-assisted planning reduces procrastination by up to 35%. Aqademiq combines adaptive scheduling, real-time feedback, and sensory-friendly design in one distraction-free hub. Set up in 5 minutes. Study for a semester.
+            <motion.p
+              variants={itemVariants}
+              className="text-body-lg text-muted-foreground max-w-xl mx-auto lg:mx-0 mb-8"
+            >
+              Aqademiq uses procrastination psychology to build a study plan you'll actually follow—set up in 5 minutes,
+              trust it for a semester.
             </motion.p>
 
             {/* CTAs */}
-            <motion.div variants={itemVariants} className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-10">
+            <motion.div
+              variants={itemVariants}
+              className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-10"
+            >
               <div className="flex flex-col items-center lg:items-start">
                 <Button variant="hero" size="xl" className="group shadow-lg shadow-primary/25">
                   Try free
@@ -108,7 +135,10 @@ export function HeroSection() {
             </motion.div>
 
             {/* Quick Stats */}
-            <motion.div variants={itemVariants} className="flex items-center justify-center lg:justify-start gap-6 text-body-sm text-muted-foreground">
+            <motion.div
+              variants={itemVariants}
+              className="flex items-center justify-center lg:justify-start gap-6 text-body-sm text-muted-foreground"
+            >
               <div className="flex items-center gap-2">
                 <CheckCircle2 className="w-4 h-4 text-success" />
                 <span>5-min setup</span>
@@ -150,7 +180,7 @@ export function HeroSection() {
                           initial={{ width: 0 }}
                           animate={{ width: `${65 + i * 10}%` }}
                           transition={{ delay: 1.2 + i * 0.1, duration: 0.6, ease: easeOutExpo }}
-                          className={`h-full rounded-md ${i % 2 === 0 ? 'bg-primary/70' : 'bg-accent/70'}`}
+                          className={`h-full rounded-md ${i % 2 === 0 ? "bg-primary/70" : "bg-accent/70"}`}
                         />
                       </div>
                     </div>
@@ -181,7 +211,7 @@ export function HeroSection() {
                     </div>
                   </div>
                 </div>
-                
+
                 {/* Dashboard content */}
                 <div className="p-5 bg-background-subtle dark:bg-surface-elevated">
                   <div className="flex items-center justify-between mb-4">
@@ -199,13 +229,17 @@ export function HeroSection() {
                         initial={{ opacity: 0, x: -10 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ delay: 1.4 + i * 0.1, duration: 0.4 }}
-                        className={`flex items-center gap-3 p-3 rounded-xl ${item.done ? 'bg-success/5 border border-success/20' : 'bg-surface border border-border'}`}
+                        className={`flex items-center gap-3 p-3 rounded-xl ${item.done ? "bg-success/5 border border-success/20" : "bg-surface border border-border"}`}
                       >
-                        <div className={`w-5 h-5 rounded-full border-2 flex items-center justify-center ${item.done ? 'bg-success border-success' : 'border-border'}`}>
+                        <div
+                          className={`w-5 h-5 rounded-full border-2 flex items-center justify-center ${item.done ? "bg-success border-success" : "border-border"}`}
+                        >
                           {item.done && <CheckCircle2 className="w-3 h-3 text-success-foreground" />}
                         </div>
                         <div className="flex-1 min-w-0">
-                          <p className={`text-body-sm font-medium truncate ${item.done ? 'text-muted-foreground line-through' : 'text-foreground'}`}>
+                          <p
+                            className={`text-body-sm font-medium truncate ${item.done ? "text-muted-foreground line-through" : "text-foreground"}`}
+                          >
                             {item.task}
                           </p>
                         </div>
