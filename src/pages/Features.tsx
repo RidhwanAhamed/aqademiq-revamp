@@ -1,8 +1,19 @@
 import { motion, useReducedMotion } from "framer-motion";
-import { 
-  Calendar, Brain, BarChart3, Focus, Zap, Clock, 
-  Bell, Target, Sparkles, CheckCircle2, ArrowRight,
-  Smartphone, RefreshCw, Shield
+import {
+  Calendar,
+  Brain,
+  BarChart3,
+  Focus,
+  Zap,
+  Clock,
+  Bell,
+  Target,
+  Sparkles,
+  CheckCircle2,
+  ArrowRight,
+  Smartphone,
+  RefreshCw,
+  Shield,
 } from "lucide-react";
 import { Header, Footer, PageLayout } from "@/components/layout";
 import { Button } from "@/components/ui/button";
@@ -15,7 +26,8 @@ const features = [
     icon: Calendar,
     title: "Smart Schedule & Calendar",
     subtitle: "Conflict-free planning, automatically",
-    description: "Aqademiq's AI transforms your courses, deadlines, and commitments into a unified, conflict-free schedule. Import your syllabus, sync your calendar, and watch as intelligent time-blocking does the rest.",
+    description:
+      "Aqademiq's AI transforms your courses, deadlines, and commitments into a unified, conflict-free schedule. Import your syllabus, sync your calendar, and watch as intelligent time-blocking does the rest.",
     benefits: [
       "Auto-sync with Google Calendar & Apple Calendar",
       "Intelligent conflict detection and resolution",
@@ -30,7 +42,8 @@ const features = [
     icon: Brain,
     title: "Ada AI Study Coach",
     subtitle: "Your personal academic advisor",
-    description: "Ada learns how you work, when you're most productive, and what tends to derail you. It provides personalized nudges, smart reminders, and task breakdowns that make starting easier.",
+    description:
+      "Ada learns how you work, when you're most productive, and what tends to derail you. It provides personalized nudges, smart reminders, and task breakdowns that make starting easier.",
     benefits: [
       "Personalized productivity insights",
       "Proactive reminders before you fall behind",
@@ -45,7 +58,8 @@ const features = [
     icon: BarChart3,
     title: "Grade Tracking & Analytics",
     subtitle: "Know exactly where you stand",
-    description: "Visualize your academic progress with predictive analytics and actionable insights. Track grades across all courses, see trends, and understand what's working.",
+    description:
+      "Visualize your academic progress with predictive analytics and actionable insights. Track grades across all courses, see trends, and understand what's working.",
     benefits: [
       "Real-time grade tracking across courses",
       "Predictive GPA calculations",
@@ -60,7 +74,8 @@ const features = [
     icon: Focus,
     title: "Focus & Procrastination Tools",
     subtitle: "Beat distraction, build momentum",
-    description: "Built-in focus sessions with adaptive work/break ratios, distraction blocking, and gentle accountability that helps you build consistent study habits.",
+    description:
+      "Built-in focus sessions with adaptive work/break ratios, distraction blocking, and gentle accountability that helps you build consistent study habits.",
     benefits: [
       "Customizable Pomodoro timer",
       "Distraction blocking during focus sessions",
@@ -81,7 +96,7 @@ const additionalFeatures = [
 
 function FeatureVisual({ type, color }: { type: string; color: string }) {
   const shouldReduceMotion = useReducedMotion();
-  
+
   const colorClasses = {
     primary: "bg-primary/10 border-primary/20 text-primary",
     accent: "bg-accent/10 border-accent/20 text-accent",
@@ -98,7 +113,7 @@ function FeatureVisual({ type, color }: { type: string; color: string }) {
           <div className="w-3 h-3 rounded-full bg-success/80" />
         </div>
       </div>
-      
+
       <div className="p-6 bg-background-subtle dark:bg-surface-elevated min-h-[240px]">
         {type === "calendar" && (
           <div className="space-y-3">
@@ -116,7 +131,7 @@ function FeatureVisual({ type, color }: { type: string; color: string }) {
                   {Array.from({ length: 3 - Math.floor(i / 2) }).map((_, j) => (
                     <div
                       key={j}
-                      className={`flex-1 h-8 rounded-lg ${j === 0 ? 'bg-primary/30' : j === 1 ? 'bg-accent/30' : 'bg-success/30'}`}
+                      className={`flex-1 h-8 rounded-lg ${j === 0 ? "bg-primary/30" : j === 1 ? "bg-accent/30" : "bg-success/30"}`}
                     />
                   ))}
                 </div>
@@ -124,7 +139,7 @@ function FeatureVisual({ type, color }: { type: string; color: string }) {
             ))}
           </div>
         )}
-        
+
         {type === "ada" && (
           <div className="space-y-4">
             <motion.div
@@ -151,7 +166,7 @@ function FeatureVisual({ type, color }: { type: string; color: string }) {
             </div>
           </div>
         )}
-        
+
         {type === "analytics" && (
           <div className="space-y-4">
             {[
@@ -184,7 +199,7 @@ function FeatureVisual({ type, color }: { type: string; color: string }) {
             ))}
           </div>
         )}
-        
+
         {type === "focus" && (
           <div className="text-center py-4">
             <motion.div
@@ -193,7 +208,10 @@ function FeatureVisual({ type, color }: { type: string; color: string }) {
               viewport={{ once: true }}
               className="w-32 h-32 mx-auto rounded-full border-8 border-warning/20 flex items-center justify-center mb-4 relative"
             >
-              <div className="absolute inset-2 rounded-full border-4 border-warning border-t-transparent animate-spin" style={{ animationDuration: '3s' }} />
+              <div
+                className="absolute inset-2 rounded-full border-4 border-warning border-t-transparent animate-spin"
+                style={{ animationDuration: "3s" }}
+              />
               <div className="text-center">
                 <div className="text-display-sm font-bold text-foreground">25:00</div>
                 <div className="text-body-xs text-muted-foreground">Focus</div>
@@ -227,11 +245,11 @@ export default function Features() {
               transition={{ duration: 0.6, ease: easeOutExpo }}
             >
               <h1 className="text-display-lg md:text-display-xl lg:text-display-2xl text-foreground mb-6">
-                Everything you need to{" "}
-                <span className="text-gradient">study smarter</span>
+                One hub for schedules, deadlines, and <span className="text-gradient">actually finishing work.</span>
               </h1>
               <p className="text-body-lg text-muted-foreground max-w-2xl mx-auto mb-8">
-                Aqademiq combines smart scheduling, AI coaching, grade tracking, and focus tools into one unified platform designed specifically for students.
+                Aqademiq combines smart scheduling, AI coaching, grade tracking, and focus tools into one unified
+                platform designed specifically for students.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button variant="hero" size="xl" className="group">
@@ -251,30 +269,30 @@ export default function Features() {
           <section
             key={feature.id}
             id={feature.id}
-            className={`section-padding ${index % 2 === 1 ? 'bg-surface-overlay/50' : ''}`}
+            className={`section-padding ${index % 2 === 1 ? "bg-surface-overlay/50" : ""}`}
           >
             <div className="container-marketing">
-              <div className={`grid lg:grid-cols-2 gap-12 lg:gap-16 items-center ${index % 2 === 1 ? 'lg:flex-row-reverse' : ''}`}>
+              <div
+                className={`grid lg:grid-cols-2 gap-12 lg:gap-16 items-center ${index % 2 === 1 ? "lg:flex-row-reverse" : ""}`}
+              >
                 {/* Content */}
                 <motion.div
                   initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true, margin: "-100px" }}
                   transition={{ duration: 0.6, ease: easeOutExpo }}
-                  className={index % 2 === 1 ? 'lg:order-2' : ''}
+                  className={index % 2 === 1 ? "lg:order-2" : ""}
                 >
-                  <div className={`w-14 h-14 rounded-2xl bg-${feature.color} flex items-center justify-center mb-6 shadow-lg`}>
+                  <div
+                    className={`w-14 h-14 rounded-2xl bg-${feature.color} flex items-center justify-center mb-6 shadow-lg`}
+                  >
                     <feature.icon className="w-7 h-7 text-primary-foreground" />
                   </div>
                   <p className="text-body-sm font-medium text-muted-foreground uppercase tracking-wider mb-2">
                     {feature.subtitle}
                   </p>
-                  <h2 className="text-display-md md:text-display-lg text-foreground mb-4">
-                    {feature.title}
-                  </h2>
-                  <p className="text-body-lg text-muted-foreground mb-6">
-                    {feature.description}
-                  </p>
+                  <h2 className="text-display-md md:text-display-lg text-foreground mb-4">{feature.title}</h2>
+                  <p className="text-body-lg text-muted-foreground mb-6">{feature.description}</p>
                   <ul className="space-y-3">
                     {feature.benefits.map((benefit) => (
                       <li key={benefit} className="flex items-center gap-3 text-body-md text-foreground">
@@ -291,7 +309,7 @@ export default function Features() {
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true, margin: "-100px" }}
                   transition={{ duration: 0.6, ease: easeOutExpo, delay: 0.1 }}
-                  className={index % 2 === 1 ? 'lg:order-1' : ''}
+                  className={index % 2 === 1 ? "lg:order-1" : ""}
                 >
                   <FeatureVisual type={feature.visual} color={feature.color} />
                 </motion.div>
@@ -359,9 +377,7 @@ export default function Features() {
                 />
               </div>
               <div className="relative z-10 max-w-2xl mx-auto">
-                <h2 className="text-display-md md:text-display-lg text-white mb-4">
-                  Ready to transform your studies?
-                </h2>
+                <h2 className="text-display-md md:text-display-lg text-white mb-4">Ready to transform your studies?</h2>
                 <p className="text-body-lg text-white/85 mb-8">
                   Join thousands of students already using Aqademiq to stay organized and achieve their goals.
                 </p>
