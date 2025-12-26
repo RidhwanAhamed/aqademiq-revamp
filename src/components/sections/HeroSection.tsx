@@ -81,13 +81,6 @@ export function HeroSection() {
             animate="visible"
             className="text-center lg:text-left"
           >
-            {/* Badge */}
-            <motion.div variants={itemVariants} className="inline-flex items-center gap-2 px-4 py-2 mb-6 rounded-full bg-primary/10 border border-primary/20 text-primary text-body-sm font-medium">
-              <Sparkles className="w-4 h-4" />
-              <span>AI-Powered Behavioral Planning</span>
-              <ChevronRight className="w-4 h-4" />
-            </motion.div>
-
             {/* Headline */}
             <motion.h1 variants={itemVariants} className="text-display-lg md:text-display-xl lg:text-display-2xl text-foreground mb-6 leading-tight">
               Procrastination is a planning problem.{" "}

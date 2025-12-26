@@ -226,10 +226,6 @@ export default function Features() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, ease: easeOutExpo }}
             >
-              <div className="inline-flex items-center gap-2 px-4 py-2 mb-6 rounded-full bg-primary/10 border border-primary/20 text-primary text-body-sm font-medium">
-                <Sparkles className="w-4 h-4" />
-                <span>Product Features</span>
-              </div>
               <h1 className="text-display-lg md:text-display-xl lg:text-display-2xl text-foreground mb-6">
                 Everything you need to{" "}
                 <span className="text-gradient">study smarter</span>
