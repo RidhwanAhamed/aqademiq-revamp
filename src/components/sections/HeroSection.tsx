@@ -81,7 +81,7 @@ export function HeroSection() {
           <motion.div variants={containerVariants} initial="hidden" animate="visible" className="text-center lg:text-left">
             {/* Headline */}
             <motion.h1 variants={itemVariants} className="text-display-lg md:text-display-xl lg:text-display-2xl text-foreground mb-6 leading-tight">
-              Stop procrastination.   <span className="text-gradient">Study smarter with Ada.</span>
+              ​Everything you need to end     <span className="text-gradient">Study smarter with Ada.</span>
             </motion.h1>
 
             {/* Subheadline */}
