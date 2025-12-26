@@ -203,10 +203,6 @@ export default function WhyAqademiq() {
               transition={{ duration: 0.6 }}
               className="text-center max-w-2xl mx-auto mb-16"
             >
-              <div className="inline-flex items-center gap-2 px-3 py-1.5 mb-4 rounded-full bg-primary/10 border border-primary/20 text-primary text-body-sm font-medium">
-                <Sparkles className="w-4 h-4" />
-                <span>Our Philosophy</span>
-              </div>
               <h2 className="text-display-md md:text-display-lg text-foreground mb-4">
                 Built on principles that{" "}
                 <span className="text-gradient">actually work</span>
