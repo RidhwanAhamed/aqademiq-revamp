@@ -62,7 +62,7 @@ export function FinalCTASection() {
               transition={{ delay: 0.2 }}
               className="text-display-md md:text-display-lg lg:text-display-xl text-white mb-4"
             >
-              Ready to take control of your studies?
+              Stop procrastinating. Start with a plan you trust.
             </motion.h2>
 
             <motion.p
@@ -72,7 +72,7 @@ export function FinalCTASection() {
               transition={{ delay: 0.3 }}
               className="text-body-lg text-white/85 mb-8"
             >
-              Join thousands of students who've transformed their academic life with Aqademiq.
+              Join thousands of students who've gone from "I'm so behind" to "I have a real plan" in under 5 minutes.
             </motion.p>
 
             <motion.div
@@ -103,19 +103,19 @@ export function FinalCTASection() {
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
               transition={{ delay: 0.5 }}
-              className="flex items-center justify-center gap-6 text-white/70 text-body-sm"
+              className="flex items-center justify-center gap-6 text-white/70 text-body-sm flex-wrap"
             >
               <div className="flex items-center gap-2">
                 <CheckCircle2 className="w-4 h-4" />
-                <span>Free forever plan</span>
+                <span>5-min setup</span>
               </div>
               <div className="flex items-center gap-2">
                 <CheckCircle2 className="w-4 h-4" />
-                <span>No credit card</span>
+                <span>Research-backed</span>
               </div>
               <div className="flex items-center gap-2">
                 <CheckCircle2 className="w-4 h-4" />
-                <span>Cancel anytime</span>
+                <span>Sensory-friendly</span>
               </div>
             </motion.div>
           </div>

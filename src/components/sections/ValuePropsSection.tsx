@@ -4,29 +4,29 @@ import { Calendar, Brain, BarChart3, Shield, Sparkles, ArrowUpRight } from "luci
 const valueProps = [
   {
     icon: Calendar,
-    title: "Smart Schedule",
-    description: "AI builds conflict-free timetables around your classes, energy levels, and commitments. No more chaos.",
+    title: "Workload Distribution, Not Task Avalanche",
+    description: "Ada analyzes your course load, upcoming deadlines, and focus style—then spreads work evenly throughout the week. For ADHD-prone students: no decision fatigue. For perfectionists: proof you're on track.",
     gradient: "from-primary/20 to-primary/5",
     iconBg: "bg-primary",
   },
   {
     icon: Brain,
-    title: "AI Study Coach",
-    description: "Ada learns how you work and nudges you before you fall behind. It's like having a tutor in your pocket.",
+    title: "Your Study Coach Built on Behavioral Psychology",
+    description: "Ada is trained on procrastination research and adaptive learning. Ask why you're procrastinating on organic chem—get a micro-strategy. Ask how to break a 20-page essay into sensory-friendly tasks.",
     gradient: "from-accent/20 to-accent/5",
     iconBg: "bg-accent",
   },
   {
     icon: BarChart3,
-    title: "Grade Tracking",
-    description: "See exactly where you stand in every course with predictive analytics and actionable insights.",
+    title: "See Your Progress. End the Anxiety Loop.",
+    description: "Procrastination thrives on uncertainty. Aqademiq centralizes grades, deadlines, and progress in one distraction-free view. Neurodivergent students appreciate the clarity; anxious students get peace of mind.",
     gradient: "from-success/20 to-success/5",
     iconBg: "bg-success",
   },
   {
     icon: Shield,
-    title: "Procrastination Support",
-    description: "Gentle accountability, smart reminders, and micro-task breakdowns that make starting easy.",
+    title: "Built for How You Actually Study",
+    description: "Pomodoro burns you out? Deep focus works better? Aqademiq supports multiple focus modes and sensory preferences. For students with ADHD, autism, or sensory sensitivities: customize your study environment.",
     gradient: "from-warning/20 to-warning/5",
     iconBg: "bg-warning",
   },
@@ -70,11 +70,11 @@ export function ValuePropsSection() {
             <span>Core Features</span>
           </div>
           <h2 className="text-display-md md:text-display-lg text-foreground mb-4">
-            Everything you need to{" "}
-            <span className="text-gradient">study smarter</span>
+            Core features designed for{" "}
+            <span className="text-gradient">how your brain works</span>
           </h2>
           <p className="text-body-lg text-muted-foreground">
-            Built for students who want to eliminate chaos and finally feel in control of their academic life.
+            Built on procrastination research and designed with neurodivergent students in mind. Accessibility isn't an afterthought.
           </p>
         </motion.div>
 

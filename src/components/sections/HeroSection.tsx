@@ -84,46 +84,49 @@ export function HeroSection() {
             {/* Badge */}
             <motion.div variants={itemVariants} className="inline-flex items-center gap-2 px-4 py-2 mb-6 rounded-full bg-primary/10 border border-primary/20 text-primary text-body-sm font-medium">
               <Sparkles className="w-4 h-4" />
-              <span>AI-Powered Study Hub</span>
+              <span>AI-Powered Behavioral Planning</span>
               <ChevronRight className="w-4 h-4" />
             </motion.div>
 
             {/* Headline */}
             <motion.h1 variants={itemVariants} className="text-display-lg md:text-display-xl lg:text-display-2xl text-foreground mb-6 leading-tight">
-              The AI study planner that{" "}
-              <span className="text-gradient">finally keeps you on track</span>
+              Procrastination is a planning problem.{" "}
+              <span className="text-gradient">Aqademiq is the solution.</span>
             </motion.h1>
 
             {/* Subheadline */}
-            <motion.p variants={itemVariants} className="text-body-lg text-muted-foreground max-w-lg mx-auto lg:mx-0 mb-8">
-              Smart schedules, deadline tracking, and an AI coach that actually helps you beat procrastination—all in one place.
+            <motion.p variants={itemVariants} className="text-body-lg text-muted-foreground max-w-xl mx-auto lg:mx-0 mb-8">
+              Research shows AI-assisted planning reduces procrastination by up to 35%. Aqademiq combines adaptive scheduling, real-time feedback, and sensory-friendly design in one distraction-free hub. Set up in 5 minutes. Study for a semester.
             </motion.p>
 
             {/* CTAs */}
             <motion.div variants={itemVariants} className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-10">
-              <Button variant="hero" size="xl" className="group shadow-lg shadow-primary/25">
-                Try free
-                <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
-              </Button>
+              <div className="flex flex-col items-center lg:items-start">
+                <Button variant="hero" size="xl" className="group shadow-lg shadow-primary/25">
+                  Try free
+                  <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
+                </Button>
+                <span className="text-body-xs text-muted-foreground mt-2">No card, 5-min setup</span>
+              </div>
               <Button variant="hero-secondary" size="xl" className="group">
                 <Play className="w-4 h-4 mr-1" />
-                Watch 60-sec demo
+                Watch Ada build a plan
               </Button>
             </motion.div>
 
             {/* Quick Stats */}
-            <motion.div variants={itemVariants} className="flex items-center justify-center lg:justify-start gap-8 text-body-sm text-muted-foreground">
+            <motion.div variants={itemVariants} className="flex items-center justify-center lg:justify-start gap-6 text-body-sm text-muted-foreground">
               <div className="flex items-center gap-2">
                 <CheckCircle2 className="w-4 h-4 text-success" />
-                <span>Free to start</span>
+                <span>5-min setup</span>
               </div>
               <div className="flex items-center gap-2">
                 <CheckCircle2 className="w-4 h-4 text-success" />
-                <span>No credit card</span>
+                <span>Research-backed</span>
               </div>
               <div className="flex items-center gap-2">
                 <CheckCircle2 className="w-4 h-4 text-success" />
-                <span>Setup in 2 min</span>
+                <span>ADHD-friendly</span>
               </div>
             </motion.div>
           </motion.div>

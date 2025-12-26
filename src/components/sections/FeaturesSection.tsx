@@ -4,38 +4,38 @@ import { Calendar, Brain, Zap, Target, Clock, BarChart3 } from "lucide-react";
 const features = [
   {
     icon: Calendar,
-    title: "Smart Scheduling",
-    description: "AI-powered timetable that adapts to your energy levels and learning patterns.",
+    title: "Adaptive Workload Distribution",
+    description: "AI-powered scheduling based on cognitive load research—not just time-blocking. Spreads work evenly so you never face a task avalanche.",
     color: "primary" as const,
   },
   {
     icon: Brain,
-    title: "Intelligent Breakdowns",
-    description: "Complex assignments become manageable micro-tasks with optimal time estimates.",
+    title: "Micro-Task Chunking",
+    description: "Complex assignments become manageable steps. Reduces executive function burden for ADHD brains and overwhelmed minds alike.",
     color: "accent" as const,
   },
   {
     icon: Target,
-    title: "Goal Tracking",
-    description: "Set academic goals and watch your progress with beautiful visualizations.",
+    title: "Visual Progress Tracking",
+    description: "See exactly where you stand. Visual progress tracking reduces anxiety through certainty—no more portal-refreshing panic.",
     color: "primary" as const,
   },
   {
     icon: Clock,
-    title: "Focus Sessions",
-    description: "Built-in Pomodoro with adaptive work/break ratios based on your productivity data.",
+    title: "Customizable Focus Modes",
+    description: "Pomodoro isn't for everyone. Choose from multiple focus modes designed for different cognitive styles and sensory preferences.",
     color: "accent" as const,
   },
   {
     icon: BarChart3,
-    title: "Analytics Dashboard",
-    description: "Understand your study habits with detailed insights and recommendations.",
+    title: "Productivity Pattern Recognition",
+    description: "Ada learns your natural rhythms—when you focus best, when you need breaks, and how to optimize your study schedule accordingly.",
     color: "primary" as const,
   },
   {
     icon: Zap,
-    title: "Ada AI Assistant",
-    description: "Your personal academic advisor that learns your style and optimizes your success.",
+    title: "Procrastination-Trained AI",
+    description: "Ada is built on behavioral psychology research, not generic productivity advice. It understands why you procrastinate and how to help you start.",
     color: "accent" as const,
   },
 ];
@@ -79,11 +79,11 @@ export function FeaturesSection() {
             <span>Features</span>
           </div>
           <h2 className="text-display-md md:text-display-lg text-foreground mb-4">
-            Everything you need to{" "}
-            <span className="text-gradient">excel academically</span>
+            Built on science, designed for{" "}
+            <span className="text-gradient">real student brains</span>
           </h2>
           <p className="text-body-lg text-muted-foreground">
-            Designed specifically for students who want to eliminate chaos and focus on what truly matters — learning and growth.
+            Every feature is grounded in procrastination research and designed with neurodivergent students in mind. No gimmicks—just tools that work.
           </p>
         </motion.div>
 

@@ -9,41 +9,41 @@ import { Button } from "@/components/ui/button";
 const easeOutExpo = [0.19, 1, 0.22, 1] as const;
 
 const problems = [
-  { icon: AlertTriangle, text: "Juggling 5-8 separate apps" },
-  { icon: AlertTriangle, text: "Constantly missing deadlines" },
-  { icon: AlertTriangle, text: "Decision fatigue before studying" },
-  { icon: AlertTriangle, text: "Losing 2+ hours/week to tool switching" },
-  { icon: AlertTriangle, text: "Generic tools that don't understand students" },
+  { icon: AlertTriangle, text: "Five apps, one mental crisis (Calendar, to-do, notes, assignments portal, email)" },
+  { icon: AlertTriangle, text: "Procrastination spiral: \"I don't know where to start\"" },
+  { icon: AlertTriangle, text: "Decision fatigue: \"Should I study for the exam or finish the essay?\"" },
+  { icon: AlertTriangle, text: "Anxiety: \"Did I miss a deadline?\"" },
+  { icon: AlertTriangle, text: "Sensory overload: Notifications everywhere, color chaos, animations you can't turn off" },
 ];
 
 const solutions = [
-  { icon: CheckCircle2, text: "One unified hub for everything" },
-  { icon: CheckCircle2, text: "AI-powered deadline tracking" },
-  { icon: CheckCircle2, text: "Clear daily plans, zero guesswork" },
-  { icon: CheckCircle2, text: "Seamless workflow, maximum focus" },
-  { icon: CheckCircle2, text: "Built specifically for student life" },
+  { icon: CheckCircle2, text: "One unified hub. Fewer apps, fewer context switches, less cognitive load." },
+  { icon: CheckCircle2, text: "Procrastination solved: Ada breaks big projects into micro-steps." },
+  { icon: CheckCircle2, text: "Clear priorities: AI shows what's urgent vs. what can wait." },
+  { icon: CheckCircle2, text: "No surprises: Track everything in real-time, grade updates included." },
+  { icon: CheckCircle2, text: "Sensory-friendly by design: Customizable interface, low-distraction mode, ADHD-aware layouts." },
 ];
 
 const philosophy = [
   {
     icon: Brain,
-    title: "Protect Your Mental Bandwidth",
-    description: "Every decision you don't have to make is energy saved for actual learning. We eliminate the planning overhead.",
+    title: "Procrastination Isn't Laziness",
+    description: "It's often a planning problem, decision fatigue, or sensory overload. Aqademiq is built by students who understand this—and we solve all three.",
   },
   {
     icon: Heart,
     title: "Sustainable Studying, Not Grinding",
-    description: "Aqademiq helps you study smarter, not just harder. We believe in balance, not burnout.",
+    description: "We believe in balance, not burnout. Aqademiq helps you study smarter so you have energy left for life.",
   },
   {
     icon: Target,
     title: "Progress Over Perfection",
-    description: "Small, consistent steps beat marathon sessions. Our system celebrates momentum, not just completion.",
+    description: "Small, consistent steps beat marathon sessions. Our system celebrates momentum and reduces the pressure to be perfect.",
   },
   {
     icon: Lightbulb,
-    title: "Designed for Diverse Minds",
-    description: "ADHD, anxiety, neurodivergence—we build for how your brain actually works, not an idealized version.",
+    title: "Built for How Your Brain Actually Works",
+    description: "Whether you think in ADHD spirals, need low-sensory planning, or just hate making decisions—Aqademiq adapts to you, not the other way around.",
   },
 ];
 
@@ -74,12 +74,12 @@ export default function WhyAqademiq() {
                 <span>Why Aqademiq</span>
               </div>
               <h1 className="text-display-lg md:text-display-xl lg:text-display-2xl text-foreground mb-6">
-                Academic planning is{" "}
-                <span className="text-gradient">broken</span>
+                Why students{" "}
+                <span className="text-gradient">actually use Aqademiq</span>
               </h1>
               <p className="text-body-lg text-muted-foreground max-w-2xl mx-auto">
-                Students are drowning in app chaos—juggling separate tools for calendars, tasks, and timers. 
-                This fragmentation destroys focus and creates decision fatigue.
+                Most productivity apps treat procrastination like a willpower problem. 
+                We know it's a planning problem, a decision fatigue problem, and often a sensory overload problem. We fix all three.
               </p>
             </motion.div>
           </div>

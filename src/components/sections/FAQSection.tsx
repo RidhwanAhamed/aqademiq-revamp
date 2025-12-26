@@ -9,28 +9,28 @@ import {
 
 const faqs = [
   {
-    question: "Is Aqademiq really free to start?",
-    answer: "Yes! You can use Aqademiq's core features completely free. Our free plan includes smart scheduling, basic task management, and access to Ada's essential guidance. Premium features like advanced analytics and unlimited AI coaching are available with our paid plans.",
+    question: "Is Aqademiq designed for ADHD or neurodivergent students?",
+    answer: "Aqademiq is designed for all students, with specific accessibility features neurodivergent students find invaluable: sensory-friendly modes, low-distraction layouts, adaptive notifications, and clear step-by-step planning. ADHD students especially benefit from Ada's micro-task breakdown and reduced decision paralysis. But anyone struggling with procrastination finds it useful.",
   },
   {
-    question: "How does Ada, the AI study coach, work?",
-    answer: "Ada learns from your study patterns, energy levels, and progress over time. It provides personalized suggestions like optimal study times, task breakdowns, and gentle reminders. The more you use Aqademiq, the smarter Ada becomes at helping you stay on track.",
+    question: "How does Aqademiq actually reduce procrastination?",
+    answer: "Procrastination research shows it's often driven by decision fatigue, task overwhelm, or poor planning—not laziness. Aqademiq addresses all three: Ada breaks big projects into concrete steps (reducing overwhelm), prioritizes your week automatically (cutting decision fatigue), and adapts your plan in real-time (boosting motivation). Studies show AI-assisted planning reduces procrastination by 30–40%.",
   },
   {
-    question: "Can I sync my existing calendar and syllabus?",
-    answer: "Absolutely! Aqademiq integrates with Google Calendar, Apple Calendar, and most university LMS systems. You can import your syllabus directly, and we'll automatically create tasks and deadlines for you.",
+    question: "How long does it take to set up?",
+    answer: "Most students finish setup in 3–5 minutes: connect your school, answer 3 quick questions about your study style, and Ada builds your week. You'll have a full semester plan before your next class.",
   },
   {
-    question: "Does it work on mobile?",
-    answer: "Aqademiq is built as a progressive web app (PWA), meaning it works beautifully on any device—desktop, tablet, or phone. You can even add it to your home screen for a native app-like experience.",
+    question: "Is the interface sensory-friendly for ADHD or autism?",
+    answer: "Yes. You can turn off animations, reduce colors, mute notifications, and switch to a simplified layout. We designed Aqademiq with the input of neurodivergent students, so sensory customization is built-in, not an afterthought.",
   },
   {
-    question: "How is Aqademiq different from other planning apps?",
-    answer: "Unlike generic to-do apps, Aqademiq is built specifically for students. Our AI understands academic workflows, deadline pressure, and procrastination patterns. We don't just list tasks—we help you actually complete them.",
+    question: "How is this different from other study apps?",
+    answer: "Most study apps are task managers with a study coat of paint. Aqademiq is built on behavioral psychology and adaptive AI. It doesn't just list what to do; it explains *why* and *when*, prevents decision paralysis, and feels designed for how students actually think—especially those prone to procrastination or sensory overload.",
   },
   {
-    question: "What if I need help or have feedback?",
-    answer: "We're here for you! Our support team responds within 24 hours, and we actively incorporate student feedback into our product roadmap. You can reach us through the in-app chat or email us directly.",
+    question: "Can I sync my existing calendar and LMS?",
+    answer: "Absolutely. Aqademiq integrates with Google Calendar, Apple Calendar, and most university LMS systems. Import your syllabus directly, and Ada automatically creates tasks and deadlines for you.",
   },
 ];
 
