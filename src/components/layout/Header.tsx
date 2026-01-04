@@ -14,19 +14,11 @@ const navLinks = [
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [hasScrolled, setHasScrolled] = useState(false);
-  
+
   const { scrollY } = useScroll();
-  const headerBg = useTransform(
-    scrollY,
-    [0, 50],
-    ["hsl(var(--background) / 0)", "hsl(var(--background) / 0.85)"]
-  );
+  const headerBg = useTransform(scrollY, [0, 50], ["hsl(var(--background) / 0)", "hsl(var(--background) / 0.85)"]);
   const headerBlur = useTransform(scrollY, [0, 50], ["blur(0px)", "blur(12px)"]);
-  const headerBorder = useTransform(
-    scrollY,
-    [0, 50],
-    ["hsl(var(--border) / 0)", "hsl(var(--border) / 1)"]
-  );
+  const headerBorder = useTransform(scrollY, [0, 50], ["hsl(var(--border) / 0)", "hsl(var(--border) / 1)"]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -74,12 +66,17 @@ export function Header() {
         {/* Desktop Actions */}
         <div className="hidden md:flex items-center gap-3">
           <ThemeToggle />
-          <Button variant="ghost" size="sm">
-            Sign In
-          </Button>
-          <Button variant="hero" size="sm">
-            Try Free
-          </Button>
+          <a href="https://aqademiq.app" target="_blank" rel="noopener noreferrer">
+            <Button variant="ghost" size="sm">
+              Sign In
+            </Button>
+          </a>
+
+          <a href="https://aqademiq.app" target="_blank" rel="noopener noreferrer">
+            <Button variant="hero" size="sm">
+              Try Free
+            </Button>
+          </a>
         </div>
 
         {/* Mobile Menu Button */}
@@ -91,11 +88,7 @@ export function Header() {
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label="Toggle menu"
           >
-            {mobileMenuOpen ? (
-              <X className="h-5 w-5" />
-            ) : (
-              <Menu className="h-5 w-5" />
-            )}
+            {mobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
           </Button>
         </div>
       </nav>
