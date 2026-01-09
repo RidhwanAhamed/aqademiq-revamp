@@ -247,13 +247,17 @@ export default function Features() {
                 platform designed specifically for students.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button variant="hero" size="xl" className="group">
-                  Try free
-                  <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
-                </Button>
-                <Button variant="hero-secondary" size="xl">
-                  Watch demo
-                </Button>
+                <a href="https://aqademiq.app" target="_blank" rel="noopener noreferrer">
+                  <Button variant="hero" size="xl" className="group">
+                    Try free
+                    <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
+                  </Button>
+                </a>
+                <a href="https://aqademiq.app" target="_blank" rel="noopener noreferrer">
+                  <Button variant="hero-secondary" size="xl">
+                    Watch demo
+                  </Button>
+                </a>
               </div>
             </motion.div>
           </div>
@@ -386,10 +390,12 @@ export default function Features() {
                 <p className="text-body-lg text-white/85 mb-8">
                   Join thousands of students already using Aqademiq to stay organized and achieve their goals.
                 </p>
-                <Button size="xl" className="bg-white text-primary hover:bg-white/90 shadow-xl">
-                  Start free trial
-                  <ArrowRight className="w-5 h-5" />
-                </Button>
+                <a href="https://aqademiq.app" target="_blank" rel="noopener noreferrer">
+                  <Button size="xl" className="bg-white text-primary hover:bg-white/90 shadow-xl">
+                    Start free trial
+                    <ArrowRight className="w-5 h-5" />
+                  </Button>
+                </a>
               </div>
             </motion.div>
           </div>

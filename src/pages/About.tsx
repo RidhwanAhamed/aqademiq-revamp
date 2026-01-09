@@ -321,17 +321,21 @@ export default function About() {
                   Whether you're a student looking for a better way to plan, or someone who wants to help us build the future of education—we'd love to hear from you.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Button size="xl" className="bg-white text-primary hover:bg-white/90 shadow-xl group">
-                    Try Aqademiq free
-                    <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
-                  </Button>
-                  <Button
-                    variant="outline"
-                    size="xl"
-                    className="border-white/30 bg-white/10 text-white hover:bg-white/20 backdrop-blur-sm"
-                  >
-                    Contact us
-                  </Button>
+                  <a href="https://aqademiq.app" target="_blank" rel="noopener noreferrer">
+                    <Button size="xl" className="bg-white text-primary hover:bg-white/90 shadow-xl group">
+                      Try Aqademiq free
+                      <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
+                    </Button>
+                  </a>
+                  <a href="https://aqademiq.app" target="_blank" rel="noopener noreferrer">
+                    <Button
+                      variant="outline"
+                      size="xl"
+                      className="border-white/30 bg-white/10 text-white hover:bg-white/20 backdrop-blur-sm"
+                    >
+                      Contact us
+                    </Button>
+                  </a>
                 </div>
               </div>
             </motion.div>

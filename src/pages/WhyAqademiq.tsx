@@ -274,10 +274,12 @@ export default function WhyAqademiq() {
                     </motion.div>
                   ))}
                 </div>
-                <Button variant="hero" size="xl" className="group">
-                  Try free today
-                  <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
-                </Button>
+                <a href="https://aqademiq.app" target="_blank" rel="noopener noreferrer">
+                  <Button variant="hero" size="xl" className="group">
+                    Try free today
+                    <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
+                  </Button>
+                </a>
               </motion.div>
 
               <motion.div
@@ -357,17 +359,21 @@ export default function WhyAqademiq() {
                   Join thousands of students who've transformed their academic experience with Aqademiq.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Button size="xl" className="bg-white text-primary hover:bg-white/90 shadow-xl group">
-                    Try free
-                    <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
-                  </Button>
-                  <Button
-                    variant="outline"
-                    size="xl"
-                    className="border-white/30 bg-white/10 text-white hover:bg-white/20 backdrop-blur-sm"
-                  >
-                    Talk to us
-                  </Button>
+                  <a href="https://aqademiq.app" target="_blank" rel="noopener noreferrer">
+                    <Button size="xl" className="bg-white text-primary hover:bg-white/90 shadow-xl group">
+                      Try free
+                      <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
+                    </Button>
+                  </a>
+                  <a href="https://aqademiq.app" target="_blank" rel="noopener noreferrer">
+                    <Button
+                      variant="outline"
+                      size="xl"
+                      className="border-white/30 bg-white/10 text-white hover:bg-white/20 backdrop-blur-sm"
+                    >
+                      Talk to us
+                    </Button>
+                  </a>
                 </div>
               </div>
             </motion.div>

@@ -116,12 +116,16 @@ export function Header() {
             </Link>
           ))}
           <div className="pt-4 flex flex-col gap-2">
-            <Button variant="outline" className="w-full justify-center">
-              Sign In
-            </Button>
-            <Button variant="hero" className="w-full justify-center">
-              Try Free
-            </Button>
+            <a href="https://aqademiq.app" target="_blank" rel="noopener noreferrer" className="w-full">
+              <Button variant="outline" className="w-full justify-center">
+                Sign In
+              </Button>
+            </a>
+            <a href="https://aqademiq.app" target="_blank" rel="noopener noreferrer" className="w-full">
+              <Button variant="hero" className="w-full justify-center">
+                Try Free
+              </Button>
+            </a>
           </div>
         </div>
       </motion.div>

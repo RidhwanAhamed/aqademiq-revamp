@@ -101,10 +101,12 @@ export function HeroSection() {
             {/* CTAs */}
             <motion.div variants={itemVariants} className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-10">
               <div className="flex flex-col items-center lg:items-start">
-                <Button variant="hero" size="xl" className="group shadow-lg shadow-primary/25">
-                  Try free
-                  <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
-                </Button>
+                <a href="https://aqademiq.app" target="_blank" rel="noopener noreferrer">
+                  <Button variant="hero" size="xl" className="group shadow-lg shadow-primary/25">
+                    Try free
+                    <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
+                  </Button>
+                </a>
                 <span className="text-body-xs text-muted-foreground mt-2">No card, 5-min setup</span>
               </div>
               <Button 
@@ -177,7 +179,7 @@ export function HeroSection() {
                   </div>
                   <div className="flex-1 flex justify-center">
                     <div className="px-4 py-1 rounded-md bg-background text-body-xs text-muted-foreground">
-                      app.aqademiq.com
+                      aqademiq.app
                     </div>
                   </div>
                 </div>
