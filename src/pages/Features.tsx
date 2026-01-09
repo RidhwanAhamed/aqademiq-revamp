@@ -1,3 +1,5 @@
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import { motion, useReducedMotion } from "framer-motion";
 import { Calendar, Brain, BarChart3, Focus, Zap, Clock, Bell, Target, Sparkles, CheckCircle2, ArrowRight, Smartphone, RefreshCw, Shield } from "lucide-react";
 import { Header, Footer, PageLayout } from "@/components/layout";
@@ -204,6 +206,23 @@ function FeatureVisual({
 }
 export default function Features() {
   const shouldReduceMotion = useReducedMotion();
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash) {
+      const elementId = location.hash.replace('#', '');
+      const element = document.getElementById(elementId);
+      if (element) {
+        setTimeout(() => {
+          element.scrollIntoView({ 
+            behavior: shouldReduceMotion ? 'auto' : 'smooth',
+            block: 'start'
+          });
+        }, 100);
+      }
+    }
+  }, [location.hash, shouldReduceMotion]);
+
   return <PageLayout>
       <Header />
       <main>
@@ -241,7 +260,7 @@ export default function Features() {
         </section>
 
         {/* Feature Deep Dives */}
-        {features.map((feature, index) => <section key={feature.id} id={feature.id} className={`section-padding ${index % 2 === 1 ? "bg-surface-overlay/50" : ""}`}>
+        {features.map((feature, index) => <section key={feature.id} id={feature.id} className={`section-padding scroll-mt-24 ${index % 2 === 1 ? "bg-surface-overlay/50" : ""}`}>
             <div className="container-marketing">
               <div className={`grid lg:grid-cols-2 gap-12 lg:gap-16 items-center ${index % 2 === 1 ? "lg:flex-row-reverse" : ""}`}>
                 {/* Content */}
