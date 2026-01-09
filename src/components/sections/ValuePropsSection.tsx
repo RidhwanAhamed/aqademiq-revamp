@@ -1,6 +1,6 @@
 import { motion, useReducedMotion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
-import { Calendar, Brain, BarChart3, Shield, Sparkles, ArrowUpRight } from "lucide-react";
+import { Calendar, Brain, BarChart3, Focus, Sparkles, ArrowUpRight } from "lucide-react";
 
 const valueProps = [
   {
@@ -29,7 +29,7 @@ const valueProps = [
   },
   {
     id: "focus",
-    icon: Shield,
+    icon: Focus,
     title: "Built for How You Actually Study",
     description: "Pomodoro burns you out? Deep focus works better? Aqademiq supports multiple focus modes and sensory preferences. For students with ADHD, autism, or sensory sensitivities: customize your study environment.",
     gradient: "from-warning/20 to-warning/5",
