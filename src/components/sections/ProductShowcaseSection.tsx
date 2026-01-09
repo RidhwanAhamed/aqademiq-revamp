@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
 import { Calendar, Focus, BarChart3, BookOpen, CheckCircle2, Clock, Brain, TrendingUp, FileText, ArrowRight } from "lucide-react";
 
@@ -131,8 +131,48 @@ const mockUI = {
 
 export function ProductShowcaseSection() {
   const [activeTab, setActiveTab] = useState("plan");
+  const [timeRemaining, setTimeRemaining] = useState(15000);
   const shouldReduceMotion = useReducedMotion();
   const currentTab = tabs.find((t) => t.id === activeTab)!;
+
+  // Auto-rotate tabs every 15 seconds
+  useEffect(() => {
+    if (shouldReduceMotion) return;
+
+    const progressInterval = setInterval(() => {
+      setTimeRemaining((prev) => {
+        const newTime = prev - 50;
+        if (newTime <= 0) {
+          return 15000;
+        }
+        return newTime;
+      });
+    }, 50);
+
+    const rotationInterval = setInterval(() => {
+      setActiveTab((prev) => {
+        const tabIds = tabs.map((t) => t.id);
+        const currentIndex = tabIds.indexOf(prev);
+        const nextIndex = (currentIndex + 1) % tabIds.length;
+        return tabIds[nextIndex];
+      });
+      setTimeRemaining(15000);
+    }, 15000);
+
+    return () => {
+      clearInterval(progressInterval);
+      clearInterval(rotationInterval);
+    };
+  }, [shouldReduceMotion]);
+
+  // Handle manual tab selection
+  const handleTabClick = useCallback((tabId: string) => {
+    setActiveTab(tabId);
+    setTimeRemaining(15000);
+  }, []);
+
+  // Calculate progress percentage (0-100)
+  const progressPercentage = ((15000 - timeRemaining) / 15000) * 100;
 
   return (
     <section className="section-padding">
@@ -159,7 +199,7 @@ export function ProductShowcaseSection() {
             {tabs.map((tab) => (
               <button
                 key={tab.id}
-                onClick={() => setActiveTab(tab.id)}
+                onClick={() => handleTabClick(tab.id)}
                 className={`relative flex items-center gap-2 px-5 py-3 rounded-xl text-body-sm font-medium transition-all duration-300 ${
                   activeTab === tab.id
                     ? "text-primary-foreground"
@@ -167,11 +207,21 @@ export function ProductShowcaseSection() {
                 }`}
               >
                 {activeTab === tab.id && (
-                  <motion.div
-                    layoutId="activeTab"
-                    className="absolute inset-0 rounded-xl bg-gradient-primary shadow-lg"
-                    transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
-                  />
+                  <>
+                    <motion.div
+                      layoutId="activeTab"
+                      className="absolute inset-0 rounded-xl bg-gradient-primary shadow-lg"
+                      transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
+                    />
+                    {/* Countdown indicator overlay */}
+                    <motion.div
+                      className="absolute inset-0 rounded-xl bg-muted/80 pointer-events-none"
+                      style={{
+                        clipPath: `inset(0 0 0 ${progressPercentage}%)`,
+                      }}
+                      transition={{ clipPath: { duration: 0 } }}
+                    />
+                  </>
                 )}
                 <tab.icon className="w-4 h-4 relative z-10" />
                 <span className="relative z-10">{tab.label}</span>

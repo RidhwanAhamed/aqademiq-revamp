@@ -1,8 +1,10 @@
 import { motion, useReducedMotion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 import { Calendar, Brain, BarChart3, Shield, Sparkles, ArrowUpRight } from "lucide-react";
 
 const valueProps = [
   {
+    id: "schedule",
     icon: Calendar,
     title: "Workload Distribution, Not Task Avalanche",
     description: "Ada analyzes your course load, upcoming deadlines, and focus style—then spreads work evenly throughout the week. For ADHD-prone students: no decision fatigue. For perfectionists: proof you're on track.",
@@ -10,6 +12,7 @@ const valueProps = [
     iconBg: "bg-primary",
   },
   {
+    id: "ada",
     icon: Brain,
     title: "Your Study Coach Built on Behavioral Psychology",
     description: "Ada is trained on procrastination research and adaptive learning. Ask why you're procrastinating on organic chem—get a micro-strategy. Ask how to break a 20-page essay into sensory-friendly tasks.",
@@ -17,6 +20,7 @@ const valueProps = [
     iconBg: "bg-accent",
   },
   {
+    id: "tracking",
     icon: BarChart3,
     title: "See Your Progress. End the Anxiety Loop.",
     description: "Procrastination thrives on uncertainty. Aqademiq centralizes grades, deadlines, and progress in one distraction-free view. Neurodivergent students appreciate the clarity; anxious students get peace of mind.",
@@ -24,6 +28,7 @@ const valueProps = [
     iconBg: "bg-success",
   },
   {
+    id: "focus",
     icon: Shield,
     title: "Built for How You Actually Study",
     description: "Pomodoro burns you out? Deep focus works better? Aqademiq supports multiple focus modes and sensory preferences. For students with ADHD, autism, or sensory sensitivities: customize your study environment.",
@@ -34,6 +39,11 @@ const valueProps = [
 
 export function ValuePropsSection() {
   const shouldReduceMotion = useReducedMotion();
+  const navigate = useNavigate();
+
+  const handleFeatureClick = (featureId: string) => {
+    navigate(`/features#${featureId}`);
+  };
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -88,6 +98,7 @@ export function ValuePropsSection() {
               variants={cardVariants}
               whileHover={shouldReduceMotion ? {} : { y: -6, scale: 1.01 }}
               transition={{ duration: 0.3 }}
+              onClick={() => handleFeatureClick(prop.id)}
               className="group relative p-6 md:p-8 rounded-2xl bg-surface border border-border overflow-hidden cursor-pointer"
             >
               {/* Background gradient on hover */}
