@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { Menu, X, BookOpen } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { ThemeToggle } from "../ThemeToggle";
 import { Button } from "../ui/button";
 
@@ -48,13 +48,13 @@ export function Header() {
       <nav className="container-marketing flex h-16 items-center justify-between">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2.5 group">
-          <motion.div
+          <motion.img
+            src="/aqademiq-logo.svg"
+            alt="Aqademiq"
             whileHover={{ rotate: -10 }}
             transition={{ type: "spring", stiffness: 400, damping: 10 }}
-            className="flex h-9 w-9 items-center justify-center rounded-lg bg-gradient-primary shadow-sm"
-          >
-            <BookOpen className="h-5 w-5 text-primary-foreground" />
-          </motion.div>
+            className="h-9 w-9"
+          />
           <span className="text-xl font-bold text-gradient">Aqademiq</span>
         </Link>
 

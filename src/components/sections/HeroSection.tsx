@@ -1,9 +1,17 @@
 import { motion, useReducedMotion } from "framer-motion";
+import { useCallback } from "react";
 import { ArrowRight, Play, Calendar, CheckCircle2, MessageSquare, Sparkles, Clock, Brain, ChevronRight } from "lucide-react";
 import { Button } from "../ui/button";
 const easeOutExpo = [0.19, 1, 0.22, 1] as const;
 export function HeroSection() {
   const shouldReduceMotion = useReducedMotion();
+
+  const handleScrollToHowItWorks = useCallback(() => {
+    const section = document.getElementById('how-it-works');
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+  }, []);
   const containerVariants = {
     hidden: {
       opacity: 0
@@ -99,9 +107,14 @@ export function HeroSection() {
                 </Button>
                 <span className="text-body-xs text-muted-foreground mt-2">No card, 5-min setup</span>
               </div>
-              <Button variant="hero-secondary" size="xl" className="group">
+              <Button 
+                variant="hero-secondary" 
+                size="xl" 
+                className="group"
+                onClick={handleScrollToHowItWorks}
+              >
                 <Play className="w-4 h-4 mr-1" />
-                Watch Ada build a plan
+                How Ada builds a plan
               </Button>
             </motion.div>
 

@@ -29,7 +29,7 @@ export function HowItWorksSection() {
   const isInView = useInView(containerRef, { once: true, margin: "-100px" });
 
   return (
-    <section className="section-padding bg-surface-overlay/50">
+    <section id="how-it-works" className="section-padding bg-surface-overlay/50">
       <div className="container-marketing">
         {/* Section Header */}
         <motion.div
