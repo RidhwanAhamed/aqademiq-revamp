@@ -9,10 +9,11 @@ import { Button } from "@/components/ui/button";
 const easeOutExpo = [0.19, 1, 0.22, 1] as const;
 
 const milestones = [
-  { year: "2024", event: "Aqademiq founded", description: "Started with a vision to transform student productivity" },
-  { year: "2024", event: "Step Dubai Conference", description: "Showcased at one of the largest tech events in the region" },
-  { year: "2024", event: "500+ Students", description: "Reached our first major user milestone at BITS Pilani and beyond" },
-  { year: "2025", event: "Ada AI Launch", description: "Introduced our intelligent study coach to the platform" },
+  { year: "2025", event: "August", description: "The journey began with the vision to create a single platform that unifies all student productivity needs—replacing the chaos of multiple apps with one intelligent solution." },
+  { year: "2025", event: "September", description: "Started building the web application, focusing on core features that would help students manage their academic workload more effectively." },
+  { year: "2025", event: "October", description: "Integrated Ada, our AI study coach, bringing intelligent assistance powered by behavioral psychology research to help students overcome procrastination." },
+  { year: "2025", event: "November", description: "Launched outreach initiatives to connect with students who face procrastination challenges, understanding their pain points and refining our approach." },
+  { year: "2026", event: "January", description: "Launched private beta program, successfully onboarding 500+ students from over 10 universities, validating our approach and gathering valuable feedback." },
 ];
 
 const values = [
@@ -104,20 +105,20 @@ export default function About() {
                     </div>
                     <div className="p-6 rounded-2xl bg-accent/10 border border-accent/20">
                       <Globe className="w-8 h-8 text-accent mb-3" />
-                      <div className="text-display-md font-bold text-foreground">50+</div>
+                      <div className="text-display-md font-bold text-foreground">10+</div>
                       <div className="text-body-sm text-muted-foreground">Universities</div>
                     </div>
                   </div>
                   <div className="space-y-4 pt-8">
                     <div className="p-6 rounded-2xl bg-success/10 border border-success/20">
                       <Star className="w-8 h-8 text-success mb-3" />
-                      <div className="text-display-md font-bold text-foreground">4.9</div>
+                      <div className="text-display-md font-bold text-foreground">4.2</div>
                       <div className="text-body-sm text-muted-foreground">User Rating</div>
                     </div>
                     <div className="p-6 rounded-2xl bg-warning/10 border border-warning/20">
                       <Award className="w-8 h-8 text-warning mb-3" />
                       <div className="text-display-md font-bold text-foreground">First</div>
-                      <div className="text-body-sm text-muted-foreground">AI Student Platform</div>
+                      <div className="text-body-sm text-muted-foreground">Unified productivity platform</div>
                     </div>
                   </div>
                 </div>
