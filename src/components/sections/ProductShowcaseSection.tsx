@@ -276,7 +276,7 @@ export function ProductShowcaseSection() {
                 </div>
                 <div className="flex-1 flex justify-center">
                   <div className="px-4 py-1 rounded-md bg-background text-body-xs text-muted-foreground">
-                    app.aqademiq.com/{activeTab}
+                    aqademiq.app/{activeTab}
                   </div>
                 </div>
               </div>

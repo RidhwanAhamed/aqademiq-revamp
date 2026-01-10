@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { BookOpen, Github, Twitter, Linkedin } from "lucide-react";
+import { Github, Twitter, Linkedin } from "lucide-react";
 
 const footerLinks = {
   product: [
@@ -42,9 +42,11 @@ export function Footer() {
           {/* Brand Column */}
           <div className="col-span-2 md:col-span-4 lg:col-span-1">
             <Link to="/" className="flex items-center gap-2.5 mb-4">
-              <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-gradient-primary shadow-sm">
-                <BookOpen className="h-5 w-5 text-primary-foreground" />
-              </div>
+              <img
+                src="/aqademiq-logo.svg"
+                alt="Aqademiq"
+                className="h-9 w-9"
+              />
               <span className="text-xl font-bold text-gradient">Aqademiq</span>
             </Link>
             <p className="text-body-sm text-muted-foreground max-w-xs mb-6">
