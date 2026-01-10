@@ -2,14 +2,16 @@ import { motion, useReducedMotion } from "framer-motion";
 import { Star } from "lucide-react";
 
 const logos = [
-  { name: "Stanford", text: "Stanford" },
-  { name: "MIT", text: "MIT" },
-  { name: "Oxford", text: "Oxford" },
-  { name: "Harvard", text: "Harvard" },
-  { name: "Cambridge", text: "Cambridge" },
-  { name: "Yale", text: "Yale" },
-  { name: "Princeton", text: "Princeton" },
-  { name: "Berkeley", text: "UC Berkeley" },
+  { name: "Wollongong", text: "University of Wollongong" },
+  { name: "Deakin", text: "Deakin University" },
+  { name: "Loughborough", text: "Loughborough University" },
+  { name: "Ajman", text: "Ajman University" },
+  { name: "UAE", text: "UAE University" },
+  { name: "AbuDhabi", text: "Abu Dhabi University" },
+  { name: "Tbilisi", text: "Tbilisi State Medical University" },
+  { name: "BITS", text: "BITS Pilani" },
+  { name: "IIIT", text: "IIIT" },
+  { name: "PennState", text: "Penn State University" },
 ];
 
 const badges = [
