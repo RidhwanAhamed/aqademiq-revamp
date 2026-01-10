@@ -13,9 +13,9 @@ const logos = [
 ];
 
 const badges = [
-  { icon: Star, text: "4.9/5 rating" },
-  { icon: Star, text: "10K+ students" },
-  { icon: Star, text: "50+ universities" },
+  { icon: Star, text: "4.2/5 rating" },
+  { icon: Star, text: "500+ students" },
+  { icon: Star, text: "10+ universities" },
 ];
 
 export function SocialProofSection() {
@@ -53,31 +53,54 @@ export function SocialProofSection() {
           ))}
         </div>
 
-        {/* Logos - Desktop static, Mobile marquee */}
+        {/* Logos - Desktop and Mobile marquee */}
         <div className="relative overflow-hidden">
-          {/* Desktop - Static Grid */}
-          <div className="hidden md:flex justify-center items-center gap-12 flex-wrap">
-            {logos.map((logo, i) => (
-              <motion.div
-                key={logo.name}
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.05, duration: 0.4 }}
-                className="text-display-sm font-bold text-muted-foreground/40 hover:text-muted-foreground/60 transition-colors duration-300"
-              >
-                {logo.text}
-              </motion.div>
-            ))}
-          </div>
+          {/* Desktop - Animated Marquee (left to right) */}
+          {!shouldReduceMotion ? (
+            <div className="hidden md:block marquee-row relative overflow-hidden py-2">
+              {/* Gradient fade edges */}
+              <div className="absolute left-0 top-0 bottom-0 w-16 md:w-24 bg-gradient-to-r from-background to-transparent z-10 pointer-events-none" />
+              <div className="absolute right-0 top-0 bottom-0 w-16 md:w-24 bg-gradient-to-l from-background to-transparent z-10 pointer-events-none" />
+              
+              {/* Scrolling content wrapper */}
+              <div className="flex animate-marquee-right">
+                {/* Render logos 4 times for seamless infinite loop */}
+                {[...Array(4)].map((_, setIndex) => (
+                  <div key={setIndex} className="flex shrink-0 items-center">
+                    {logos.map((logo, index) => (
+                      <div
+                        key={`set-${setIndex}-${logo.name}-${index}`}
+                        className="text-display-sm font-bold text-muted-foreground/40 hover:text-muted-foreground/60 transition-colors duration-300 whitespace-nowrap px-6"
+                      >
+                        {logo.text}
+                      </div>
+                    ))}
+                  </div>
+                ))}
+              </div>
+            </div>
+          ) : (
+            <div className="hidden md:flex overflow-x-auto py-4 scrollbar-hide">
+              <div className="flex px-4">
+                {logos.map((logo) => (
+                  <div
+                    key={logo.name}
+                    className="text-display-sm font-bold text-muted-foreground/40 whitespace-nowrap px-6"
+                  >
+                    {logo.text}
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
 
           {/* Mobile - Marquee */}
           <div className="md:hidden relative">
-            <div className="flex gap-12 animate-marquee">
+            <div className="flex animate-marquee">
               {[...logos, ...logos].map((logo, i) => (
                 <div
                   key={`${logo.name}-${i}`}
-                  className="text-display-sm font-bold text-muted-foreground/40 whitespace-nowrap"
+                  className="text-display-sm font-bold text-muted-foreground/40 whitespace-nowrap px-6"
                 >
                   {logo.text}
                 </div>
