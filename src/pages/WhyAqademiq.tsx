@@ -365,7 +365,7 @@ export default function WhyAqademiq() {
                       <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
                     </Button>
                   </a>
-                  <a href="https://aqademiq.app" target="_blank" rel="noopener noreferrer">
+                  <a href="https://mail.google.com/mail/?view=cm&fs=1&to=tryaqademiq@gmail.com">
                     <Button
                       variant="outline"
                       size="xl"

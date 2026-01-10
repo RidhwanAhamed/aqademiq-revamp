@@ -1,4 +1,5 @@
 import { motion, useReducedMotion } from "framer-motion";
+import { useState } from "react";
 import { 
   Heart, Target, Users, Award, Rocket, BookOpen,
   Sparkles, ArrowRight, Globe, Zap, Star
@@ -39,25 +40,50 @@ const values = [
   },
 ];
 
+// Team images - assuming they'll be in src/team_images/ folder
+// Import placeholder - user will need to add actual images
 const team = [
   {
-    name: "Founder",
-    role: "CEO & Product",
-    bio: "Passionate about reimagining education technology for the modern student.",
-    avatar: "F",
+    name: "Ridhwan Ahamed",
+    role: "CEO & Founder",
+    bio: "Leading the vision to transform student productivity through innovative technology and strategic direction.",
+    image: "/team_images/RidhwanAhamed.png", // Placeholder - user should add image
+    avatar: "RA",
   },
   {
-    name: "Co-Founder",
-    role: "Engineering",
-    bio: "Building the technical foundation for a more productive academic experience.",
-    avatar: "C",
+    name: "Mohammed Aswath",
+    role: "CTO",
+    bio: "Architecting the technical infrastructure and leading development of our cutting-edge platform.",
+    image: "/team_images/MohammedAswath.png", // Placeholder - user should add image
+    avatar: "MA",
   },
   {
-    name: "Ada",
-    role: "AI Study Coach",
-    bio: "Your tireless AI companion, always learning how to help you better.",
-    avatar: "🤖",
-    isAI: true,
+    name: "Zayaan Ali",
+    role: "Growth & Partnerships",
+    bio: "Building strategic partnerships and driving growth initiatives to expand our reach to students worldwide.",
+    image: "/team_images/ZayaanAli.png", // Placeholder - user should add image
+    avatar: "ZA",
+  },
+  {
+    name: "Mariah Shania",
+    role: "Marketing Lead",
+    bio: "Crafting compelling narratives and marketing strategies that connect with students and showcase our mission.",
+    image: "/team_images/MariahShania.png", // Placeholder - user should add image
+    avatar: "MS",
+  },
+  {
+    name: "Abdul Kader",
+    role: "Financial Manager",
+    bio: "Managing finances and ensuring sustainable growth while maintaining fiscal responsibility and strategic planning.",
+    image: "/team_images/AbdulKader.png", // Placeholder - user should add image
+    avatar: "AK",
+  },
+  {
+    name: "Nawfil Faraaz",
+    role: "Data Analytics Lead",
+    bio: "Analyzing user data and insights to drive product improvements and enhance the student experience.",
+    image: "/team_images/NawfilFaraaz.png", // Placeholder - user should add image
+    avatar: "NF",
   },
 ];
 
@@ -265,33 +291,43 @@ export default function About() {
                 Meet the <span className="text-gradient">team</span>
               </h2>
               <p className="text-body-lg text-muted-foreground">
-                A small but passionate team dedicated to transforming how students plan and achieve.
+              We are the team who faced the problem and we built the solution so others don't face the same problem.
               </p>
             </motion.div>
 
-            <div className="grid md:grid-cols-3 gap-6 max-w-3xl mx-auto">
-              {team.map((member, i) => (
-                <motion.div
-                  key={member.name}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: i * 0.1, duration: 0.5 }}
-                  whileHover={shouldReduceMotion ? {} : { y: -6, scale: 1.02 }}
-                  className="p-6 rounded-2xl bg-surface border border-border text-center hover:shadow-lg transition-all duration-300"
-                >
-                  <div className={`w-20 h-20 mx-auto rounded-full flex items-center justify-center mb-4 text-2xl font-bold ${
-                    member.isAI 
-                      ? 'bg-gradient-primary text-primary-foreground' 
-                      : 'bg-muted text-muted-foreground'
-                  }`}>
-                    {member.avatar}
-                  </div>
-                  <h3 className="text-body-lg font-semibold text-foreground">{member.name}</h3>
-                  <p className="text-body-sm text-primary font-medium mb-2">{member.role}</p>
-                  <p className="text-body-sm text-muted-foreground">{member.bio}</p>
-                </motion.div>
-              ))}
+            <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+              {team.map((member, i) => {
+                const TeamMemberCard = () => {
+                  const [imageError, setImageError] = useState(false);
+                  return (
+                    <motion.div
+                      initial={{ opacity: 0, y: 30 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ delay: i * 0.1, duration: 0.5 }}
+                      whileHover={shouldReduceMotion ? {} : { y: -6, scale: 1.02 }}
+                      className="p-6 rounded-2xl bg-surface border border-border text-center hover:shadow-lg transition-all duration-300"
+                    >
+                      <div className="w-24 h-24 mx-auto rounded-full overflow-hidden mb-4 border-2 border-border flex items-center justify-center bg-muted">
+                        {member.image && !imageError ? (
+                          <img
+                            src={member.image}
+                            alt={member.name}
+                            className="w-full h-full object-cover"
+                            onError={() => setImageError(true)}
+                          />
+                        ) : (
+                          <span className="text-2xl font-bold text-muted-foreground">{member.avatar}</span>
+                        )}
+                      </div>
+                      <h3 className="text-body-lg font-semibold text-foreground">{member.name}</h3>
+                      <p className="text-body-sm text-primary font-medium mb-2">{member.role}</p>
+                      <p className="text-body-sm text-muted-foreground">{member.bio}</p>
+                    </motion.div>
+                  );
+                };
+                return <TeamMemberCard key={member.name} />;
+              })}
             </div>
           </div>
         </section>
@@ -328,7 +364,7 @@ export default function About() {
                       <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
                     </Button>
                   </a>
-                  <a href="https://aqademiq.app" target="_blank" rel="noopener noreferrer">
+                  <a href="https://mail.google.com/mail/?view=cm&fs=1&to=tryaqademiq@gmail.com">
                     <Button
                       variant="outline"
                       size="xl"

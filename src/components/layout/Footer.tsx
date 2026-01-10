@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Github, Twitter, Linkedin } from "lucide-react";
+import { Linkedin, Instagram, MessageCircle } from "lucide-react";
 
 const footerLinks = {
   product: [
@@ -27,10 +27,26 @@ const footerLinks = {
   ],
 };
 
+// WhatsApp phone number - update with actual number (format: country code + number, no + or spaces)
+// Example: 1234567890 for +1 234 567 890
+const WHATSAPP_NUMBER = "+971501292021"; // TODO: Replace with actual WhatsApp number
+
 const socialLinks = [
-  { name: "Twitter", href: "#", icon: Twitter },
-  { name: "GitHub", href: "#", icon: Github },
-  { name: "LinkedIn", href: "#", icon: Linkedin },
+  { 
+    name: "LinkedIn", 
+    href: "https://www.linkedin.com/company/aqademiq", 
+    icon: Linkedin 
+  },
+  { 
+    name: "Instagram", 
+    href: "https://www.instagram.com/tryaqademiq/", 
+    icon: Instagram 
+  },
+  { 
+    name: "WhatsApp", 
+    href: `https://wa.me/${WHATSAPP_NUMBER}`, 
+    icon: MessageCircle 
+  },
 ];
 
 export function Footer() {
