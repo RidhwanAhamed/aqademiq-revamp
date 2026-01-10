@@ -391,14 +391,14 @@
   .animate-marquee-left {
     display: flex;
     width: max-content;
-    animation: marquee-left 30s linear infinite;
+    animation: marquee-left 45s linear infinite;
     will-change: transform;
   }
 
   .animate-marquee-right {
     display: flex;
     width: max-content;
-    animation: marquee-right 30s linear infinite;
+    animation: marquee-right 45s linear infinite;
     will-change: transform;
   }
 

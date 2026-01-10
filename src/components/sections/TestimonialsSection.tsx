@@ -1,60 +1,109 @@
 import { motion, useReducedMotion } from "framer-motion";
 import { Quote, Star } from "lucide-react";
+import JonathanSamuelImg from "@/testimonial_images/JonathanSamuel.png";
+import ThisalPereraImg from "@/testimonial_images/ThisalPerera.png";
+import KaviyanElanImg from "@/testimonial_images/KaviyanElan.png";
+import SanaSultanaImg from "@/testimonial_images/SanaSultana.png";
+import AbdullahAlAmeriImg from "@/testimonial_images/AbdullahAlAmeri.png";
+import HaseebZulfiqarImg from "@/testimonial_images/HaseebZulfiqar.png";
+import EthanDsouzaImg from "@/testimonial_images/EthanDsouza.png";
+import AdeelZulfiqarImg from "@/testimonial_images/AdeelZulfiqar.png";
+import DevaduttBImg from "@/testimonial_images/DevaduttB.png";
+import GaurishCPImg from "@/testimonial_images/GaurishCP.png";
 
 const testimonials = [
   {
+    quote: "Balancing multiple engineering projects was overwhelming. Aqademiq helps me track deadlines across all my courses and breaks down complex assignments into manageable steps. My grades improved significantly.",
+    name: "Jonathan Samuel",
+    major: "Mechatronics Engineering",
+    university: "University of Wollongong",
+    image: JonathanSamuelImg,
+    rating: 5,
+  },
+  {
+    quote: "As a commerce student, I juggle multiple subjects with different assignment styles. Aqademiq's smart scheduling adapts to my workload and helps me prioritize what needs attention first.",
+    name: "Thisal Perera",
+    major: "BCom Student",
+    university: "Deakin University",
+    image: ThisalPereraImg,
+    rating: 5,
+  },
+  {
+    quote: "Managing my Master's thesis while keeping up with coursework was challenging. Aqademiq organizes my research tasks and coursework deadlines in one place. It's been a game-changer for my productivity.",
+    name: "Kaviyan Elan",
+    major: "MEng Electrical and Electronics",
+    university: "Loughborough University",
+    image: KaviyanElanImg,
+    rating: 5,
+  },
+  {
+    quote: "Clinical rotations plus study time requires careful planning. Aqademiq helps me balance my dental school schedule, ensuring I don't miss important deadlines or exam prep sessions.",
+    name: "Sana Sultana",
+    major: "Bachelors in Dentistry",
+    university: "Ajman University",
+    image: SanaSultanaImg,
+    rating: 5,
+  },
+  {
+    quote: "Economics courses have overlapping deadlines that used to stress me out. With Aqademiq, I can see everything at a glance and plan my study sessions more effectively. Much less anxiety now.",
+    name: "Abdullah Al Ameri",
+    major: "Bachelor's of Economics",
+    university: "United Arab Emirates University",
+    image: AbdullahAlAmeriImg,
+    rating: 5,
+  },
+  {
+    quote: "AI engineering projects can be complex with many moving parts. Aqademiq breaks everything down and helps me track progress across multiple coding assignments. I stay on top of everything now.",
+    name: "Haseeb Zulfiqar",
+    major: "AI Engineering",
+    university: "Abu Dhabi University",
+    image: HaseebZulfiqarImg,
+    rating: 5,
+  },
+  {
+    quote: "Finance courses have frequent exams and assignments. Aqademiq's grade tracking and deadline reminders keep me organized. I can focus on studying instead of worrying about missing deadlines.",
+    name: "Ethan D'souza",
+    major: "BBA (Finance)",
+    university: "University of Wollongong",
+    image: EthanDsouzaImg,
+    rating: 5,
+  },
+  {
+    quote: "Medical school is intense with clinical rotations and studies. Aqademiq helps me manage my cardiology rotation schedule alongside my coursework. It's become essential for staying organized.",
+    name: "Adeel Zulfiqar",
+    major: "MD. Cardiology",
+    university: "Tbilisi State Medical University",
+    image: AdeelZulfiqarImg,
+    rating: 5,
+  },
+  {
     quote: "I have ADHD and I was constantly juggling five apps. Now everything's in one place and Ada's suggestions actually make sense. I stopped procrastinating because I don't have decision paralysis anymore.",
-    name: "Alex",
-    role: "CS Student",
-    avatar: "A",
+    name: "Devadutt B",
+    major: "BEng Computer Science",
+    university: "BITS Pilani",
+    image: DevaduttBImg,
     rating: 5,
   },
   {
-    quote: "I used to refresh my grades portal every hour out of anxiety. Now I check Aqademiq once and I trust the plan. My stress dropped so much.",
-    name: "Jordan",
-    role: "Pre-med",
-    avatar: "J",
-    rating: 5,
-  },
-  {
-    quote: "The low-distraction mode saved me. No notifications I didn't ask for, no overwhelming colors. I can actually focus for more than 5 minutes.",
-    name: "Casey",
-    role: "Design Student",
-    avatar: "C",
-    rating: 5,
-  },
-  {
-    quote: "Used to procrastinate until midnight. Now Aqademiq breaks assignments into bite-sized tasks. I actually start early.",
-    name: "Sam",
-    role: "Business Student",
-    avatar: "S",
-    rating: 5,
-  },
-  {
-    quote: "Finally, an app that doesn't make me feel bad about needing reminders. Ada feels like a supportive friend, not a nagging parent.",
-    name: "Morgan",
-    role: "Psychology Major",
-    avatar: "M",
-    rating: 5,
-  },
-  {
-    quote: "The weekly review feature helped me understand my patterns. Turns out I'm most productive at 10 PM—and Aqademiq adjusted my schedule accordingly.",
-    name: "Riley",
-    role: "Engineering Student",
-    avatar: "R",
+    quote: "Biotechnology labs require precise timing and organization. Aqademiq helps me plan my lab work around my coursework deadlines. The weekly reviews help me understand my productivity patterns.",
+    name: "Gaurish CP",
+    major: "BEng Biotechnology",
+    university: "BITS Pilani",
+    image: GaurishCPImg,
     rating: 5,
   },
 ];
 
-// Split testimonials into two rows
-const row1Testimonials = testimonials.slice(0, 3);
-const row2Testimonials = testimonials.slice(3, 6);
+// Split testimonials into two rows (5 per row)
+const row1Testimonials = testimonials.slice(0, 5);
+const row2Testimonials = testimonials.slice(5, 10);
 
 interface Testimonial {
   quote: string;
   name: string;
-  role: string;
-  avatar: string;
+  major: string;
+  university: string;
+  image: string;
   rating: number;
 }
 
@@ -78,12 +127,15 @@ function TestimonialCard({ testimonial }: { testimonial: Testimonial }) {
 
       {/* Author */}
       <div className="flex items-center gap-3">
-        <div className="w-10 h-10 rounded-full bg-gradient-primary flex items-center justify-center text-primary-foreground font-semibold text-body-sm">
-          {testimonial.avatar}
-        </div>
-        <div>
-          <div className="text-body-sm font-semibold text-foreground">{testimonial.name}</div>
-          <div className="text-body-xs text-muted-foreground">{testimonial.role}</div>
+        <img
+          src={testimonial.image}
+          alt={testimonial.name}
+          className="w-10 h-10 rounded-full object-cover flex-shrink-0 border-2 border-border"
+        />
+        <div className="min-w-0 flex-1">
+          <div className="text-body-sm font-semibold text-foreground truncate">{testimonial.name}</div>
+          <div className="text-body-xs text-muted-foreground truncate">{testimonial.major}</div>
+          <div className="text-body-xs text-muted-foreground/70 truncate">{testimonial.university}</div>
         </div>
       </div>
     </div>
