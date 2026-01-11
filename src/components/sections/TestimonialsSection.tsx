@@ -38,7 +38,7 @@ const testimonials = [
   },
   {
     quote: "Clinical rotations plus study time requires careful planning. Aqademiq helps me balance my dental school schedule, ensuring I don't miss important deadlines or exam prep sessions.",
-    name: "Sana Sultana",
+    name: "Sana",
     major: "Bachelors in Dentistry",
     university: "Ajman University",
     image: SanaSultanaImg,
