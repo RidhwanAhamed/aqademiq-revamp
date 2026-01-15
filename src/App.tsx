@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { GoToTopButton } from "@/components/GoToTopButton";
+import { SEOHead } from "@/components/SEOHead";
 import Index from "./pages/Index";
 import Features from "./pages/Features";
 import WhyAqademiq from "./pages/WhyAqademiq";
@@ -38,6 +39,7 @@ const App = () => (
         <Toaster />
         <Sonner />
         <BrowserRouter>
+          <SEOHead />
           <ScrollToTop />
           <Routes>
             <Route path="/" element={<Index />} />

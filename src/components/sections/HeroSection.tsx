@@ -89,7 +89,7 @@ export function HeroSection() {
           <motion.div variants={containerVariants} initial="hidden" animate="visible" className="text-center lg:text-left">
             {/* Headline */}
             <motion.h1 variants={itemVariants} className="text-display-lg md:text-display-xl lg:text-display-2xl text-foreground mb-6 leading-tight">
-              ​Everything you need to end     <span className="text-gradient">procrastination.</span>
+              Student Productivity App: Everything you need to end     <span className="text-gradient">procrastination.</span>
             </motion.h1>
 
             {/* Subheadline */}
