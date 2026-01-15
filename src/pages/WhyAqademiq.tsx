@@ -4,10 +4,9 @@ import {
   ArrowRight, AlertTriangle, CheckCircle2, Lightbulb
 } from "lucide-react";
 import { Header, Footer, PageLayout } from "@/components/layout";
+import { SEO } from "@/components/SEO";
+import { getSEOConfig } from "@/lib/seo-config";
 import { Button } from "@/components/ui/button";
-import { useSEO } from "@/hooks/useSEO";
-import { StructuredData } from "@/components/StructuredData";
-import { generateBreadcrumbSchema } from "@/lib/structuredData";
 
 const easeOutExpo = [0.19, 1, 0.22, 1] as const;
 
@@ -58,17 +57,11 @@ const stats = [
 ];
 
 export default function WhyAqademiq() {
-  useSEO(); // Update SEO meta tags for this page
   const shouldReduceMotion = useReducedMotion();
-
-  const breadcrumbData = generateBreadcrumbSchema([
-    { position: 1, name: "Home", item: "https://aqademiq.com" },
-    { position: 2, name: "Why Aqademiq", item: "https://aqademiq.com/why-aqademiq" },
-  ]);
 
   return (
     <PageLayout>
-      <StructuredData data={breadcrumbData} />
+      <SEO {...getSEOConfig('/why-aqademiq')} />
       <Header />
       <main>
         {/* Hero */}

@@ -3,10 +3,9 @@ import { useLocation } from "react-router-dom";
 import { motion, useReducedMotion } from "framer-motion";
 import { Calendar, Brain, BarChart3, Focus, Zap, Clock, Bell, Target, Sparkles, CheckCircle2, ArrowRight, Smartphone, RefreshCw, Shield } from "lucide-react";
 import { Header, Footer, PageLayout } from "@/components/layout";
+import { SEO } from "@/components/SEO";
+import { getSEOConfig } from "@/lib/seo-config";
 import { Button } from "@/components/ui/button";
-import { useSEO } from "@/hooks/useSEO";
-import { StructuredData } from "@/components/StructuredData";
-import { generateBreadcrumbSchema } from "@/lib/structuredData";
 const easeOutExpo = [0.19, 1, 0.22, 1] as const;
 const features = [{
   id: "schedule",
@@ -208,7 +207,6 @@ function FeatureVisual({
     </div>;
 }
 export default function Features() {
-  useSEO(); // Update SEO meta tags for this page
   const shouldReduceMotion = useReducedMotion();
   const location = useLocation();
 
@@ -227,13 +225,8 @@ export default function Features() {
     }
   }, [location.hash, shouldReduceMotion]);
 
-  const breadcrumbData = generateBreadcrumbSchema([
-    { position: 1, name: "Home", item: "https://aqademiq.com" },
-    { position: 2, name: "Features", item: "https://aqademiq.com/features" },
-  ]);
-
   return <PageLayout>
-      <StructuredData data={breadcrumbData} />
+      <SEO {...getSEOConfig('/features')} />
       <Header />
       <main>
         {/* Hero Section */}
