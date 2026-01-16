@@ -81,10 +81,10 @@ const team = [
     avatar: "AK",
   },
   {
-    name: "Nawfil Faraaz",
-    role: "Data Analytics Lead",
-    bio: "Analyzing user data and insights to drive product improvements and enhance the student experience.",
-    image: "/team_images/NawfilFaraaz.png", // Placeholder - user should add image
+    name: "Hania Faizal",
+    role: "Marketing Creative",
+    bio: "Creating visually engaging, story-driven assets that strengthen our brand and connect with students across digital platforms.",
+    image: "/team_images/HaniaFaizal.png", // Placeholder - user should add image
     avatar: "NF",
   },
 ];
