@@ -1,0 +1,72 @@
+# Aqademiq — AI-Powered Student Productivity Hub
+# https://aqademiq.com
+# Last updated: 2026-03-02
+
+## About
+Aqademiq is an AI-powered academic planning and productivity platform designed for students. Built on procrastination psychology research, it helps students overcome decision fatigue, task overwhelm, and poor planning — the real drivers of procrastination. Aqademiq features an AI study coach named Ada that creates personalized weekly study plans, breaks large projects into micro-tasks, and adapts in real-time to student progress.
+
+## Key Differentiators
+- Built on behavioral psychology and procrastination research
+- ADHD-friendly and neurodivergent-accessible by design
+- AI study coach (Ada) that personalizes plans in real-time
+- Sensory-friendly modes, low-distraction layouts, adaptive notifications
+- 5-minute setup, full semester coverage
+- Integrates with Google Calendar, Apple Calendar, and university LMS systems
+
+## Target Users
+- College and university students
+- Students with ADHD or neurodivergent conditions
+- Students struggling with procrastination or time management
+- Anyone seeking AI-assisted academic planning
+
+## Pages
+
+### Home
+- URL: https://aqademiq.com/
+- Description: Main landing page showcasing Aqademiq's AI-powered study planning, anti-procrastination features, and ADHD-friendly design.
+
+### Features
+- URL: https://aqademiq.com/features
+- Description: Detailed breakdown of all features including smart weekly planning, AI study coach Ada, grade analytics, focus timer, task chunking, and neurodivergent accessibility options.
+
+### Why Aqademiq
+- URL: https://aqademiq.com/why-aqademiq
+- Description: Explains why students choose Aqademiq over other study apps, including comparisons with generic task managers, research-backed methodology, and real student testimonials.
+
+### About
+- URL: https://aqademiq.com/about
+- Description: Team information, company mission, and the story behind building Aqademiq for students who procrastinate.
+
+## App
+- URL: https://aqademiq.app
+- Description: The Aqademiq web application where students sign up, connect their school, and get AI-generated study plans.
+
+## FAQ
+
+Q: Is Aqademiq designed for ADHD or neurodivergent students?
+A: Aqademiq is designed for all students, with specific accessibility features neurodivergent students find invaluable: sensory-friendly modes, low-distraction layouts, adaptive notifications, and clear step-by-step planning. ADHD students especially benefit from Ada's micro-task breakdown and reduced decision paralysis.
+
+Q: How does Aqademiq actually reduce procrastination?
+A: Procrastination research shows it's often driven by decision fatigue, task overwhelm, or poor planning — not laziness. Aqademiq addresses all three: Ada breaks big projects into concrete steps, prioritizes your week automatically, and adapts your plan in real-time. Studies show AI-assisted planning reduces procrastination by 30–40%.
+
+Q: How long does it take to set up?
+A: Most students finish setup in 3–5 minutes: connect your school, answer 3 quick questions about your study style, and Ada builds your week.
+
+Q: Is the interface sensory-friendly for ADHD or autism?
+A: Yes. You can turn off animations, reduce colors, mute notifications, and switch to a simplified layout. Sensory customization is built-in, not an afterthought.
+
+Q: How is this different from other study apps?
+A: Most study apps are task managers with a study coat of paint. Aqademiq is built on behavioral psychology and adaptive AI. It doesn't just list what to do; it explains why and when, prevents decision paralysis, and feels designed for how students actually think.
+
+Q: Can I sync my existing calendar and LMS?
+A: Absolutely. Aqademiq integrates with Google Calendar, Apple Calendar, and most university LMS systems. Import your syllabus directly, and Ada automatically creates tasks and deadlines for you.
+
+## Contact
+- Website: https://aqademiq.com
+- App: https://aqademiq.app
+- LinkedIn: https://www.linkedin.com/company/aqademiq
+- Instagram: https://www.instagram.com/tryaqademiq/
+- Twitter: @Aqademiq
+
+## Extended Info
+For more detailed information, see: https://aqademiq.com/.well-known/llms-full.txt

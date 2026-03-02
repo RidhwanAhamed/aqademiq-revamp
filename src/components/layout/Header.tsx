@@ -38,7 +38,7 @@ export function Header() {
       }}
       className="fixed top-0 left-0 right-0 z-50 border-b transition-shadow"
     >
-      <nav className="container-marketing flex h-16 items-center justify-between">
+      <nav aria-label="Main navigation" className="container-marketing flex h-16 items-center justify-between">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2.5 group">
           <motion.img

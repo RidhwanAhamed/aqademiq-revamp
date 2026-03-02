@@ -5,9 +5,9 @@ const DEFAULT_OG_IMAGE = 'https://aqademiq.com/lovable-uploads/322f4c09-269e-4fa
 
 export const seoConfig: Record<string, SEOConfig> = {
   '/': {
-    title: 'Aqademiq - Student Productivity Hub | Productivity App for Students',
-    description: 'Aqademiq is the ultimate productivity hub for students. Master study habits, time management, and academic success with our productivity app designed specifically for students.',
-    keywords: 'student productivity hub, productivity app for students, student productivity app, academic productivity, study productivity, student time management',
+    title: 'Aqademiq — AI Study Planner for Students Who Procrastinate | ADHD-Friendly',
+    description: "Aqademiq uses procrastination psychology to build study plans you'll actually follow. ADHD-friendly, neurodivergent-accessible, AI-powered. Set up in 5 minutes.",
+    keywords: 'ADHD study app, AI study planner, neurodivergent planner, procrastination app for students, best study app for ADHD, college productivity app, student time management, academic planning tools, executive function app, anti-procrastination app, student productivity hub, AI study coach, study planner for college, neurodivergent study tools, student organization app',
     canonical: `${BASE_URL}/`,
     ogImage: DEFAULT_OG_IMAGE,
     ogType: 'website',
@@ -16,26 +16,40 @@ export const seoConfig: Record<string, SEOConfig> = {
       {
         '@context': 'https://schema.org',
         '@type': 'WebPage',
-        name: 'Aqademiq - Student Productivity Hub',
-        description: 'Aqademiq is the ultimate productivity hub for students. Master study habits, time management, and academic success with our productivity app designed specifically for students.',
+        name: 'Aqademiq — AI Study Planner for Students Who Procrastinate',
+        description: 'AI-powered academic planning platform built on procrastination psychology. ADHD-friendly, neurodivergent-accessible, set up in 5 minutes.',
         url: `${BASE_URL}/`,
         image: DEFAULT_OG_IMAGE,
+        speakable: {
+          '@type': 'SpeakableSpecification',
+          cssSelector: ['h1', '.hero-description', '.faq-answer'],
+        },
         publisher: {
           '@type': 'Organization',
           name: 'Aqademiq',
+          url: BASE_URL,
+          logo: `${BASE_URL}/aqademiq-logo.svg`,
+        },
+        mainEntity: {
+          '@type': 'SoftwareApplication',
+          name: 'Aqademiq',
+          applicationCategory: 'EducationalApplication',
+          operatingSystem: 'Web',
+          url: BASE_URL,
         },
       },
       {
         '@context': 'https://schema.org',
         '@type': 'HowTo',
-        name: 'How to Use Aqademiq Student Productivity Hub',
-        description: 'Learn how to set up and use Aqademiq, the productivity hub for students, in 5 minutes.',
+        name: 'How to Stop Procrastinating with Aqademiq AI Study Planner',
+        description: 'Set up Aqademiq in 5 minutes and get an AI-generated study plan that adapts to your habits.',
+        totalTime: 'PT5M',
         step: [
           {
             '@type': 'HowToStep',
             position: 1,
             name: 'Connect Your School',
-            text: 'Plug in your university and course list. Aqademiq syncs all your deadlines and course schedule. (2 minutes)',
+            text: 'Plug in your university and course list. Aqademiq syncs all your deadlines and course schedule automatically. (2 minutes)',
           },
           {
             '@type': 'HowToStep',
@@ -47,7 +61,7 @@ export const seoConfig: Record<string, SEOConfig> = {
             '@type': 'HowToStep',
             position: 3,
             name: 'Get Your Week Plan',
-            text: 'Boom. Your semester unfolds week by week. Each day shows exactly what to focus on—no overwhelm, no decision paralysis. Ada adapts it as your courses evolve. (1 minute)',
+            text: 'Your semester unfolds week by week. Each day shows exactly what to focus on — no overwhelm, no decision paralysis. Ada adapts as courses evolve. (1 minute)',
           },
         ],
       },
@@ -60,7 +74,7 @@ export const seoConfig: Record<string, SEOConfig> = {
             name: 'Is Aqademiq designed for ADHD or neurodivergent students?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Aqademiq is designed for all students, with specific accessibility features neurodivergent students find invaluable: sensory-friendly modes, low-distraction layouts, adaptive notifications, and clear step-by-step planning. ADHD students especially benefit from Ada\'s micro-task breakdown and reduced decision paralysis. But anyone struggling with procrastination finds it useful.',
+              text: 'Aqademiq is designed for all students, with specific accessibility features neurodivergent students find invaluable: sensory-friendly modes, low-distraction layouts, adaptive notifications, and clear step-by-step planning. ADHD students especially benefit from Ada\'s micro-task breakdown and reduced decision paralysis.',
             },
           },
           {
@@ -68,15 +82,15 @@ export const seoConfig: Record<string, SEOConfig> = {
             name: 'How does Aqademiq actually reduce procrastination?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Procrastination research shows it\'s often driven by decision fatigue, task overwhelm, or poor planning—not laziness. Aqademiq addresses all three: Ada breaks big projects into concrete steps (reducing overwhelm), prioritizes your week automatically (cutting decision fatigue), and adapts your plan in real-time (boosting motivation). Studies show AI-assisted planning reduces procrastination by 30–40%.',
+              text: 'Procrastination research shows it\'s often driven by decision fatigue, task overwhelm, or poor planning — not laziness. Aqademiq addresses all three: Ada breaks big projects into concrete steps (reducing overwhelm), prioritizes your week automatically (cutting decision fatigue), and adapts your plan in real-time (boosting motivation).',
             },
           },
           {
             '@type': 'Question',
-            name: 'How long does it take to set up?',
+            name: 'How long does it take to set up Aqademiq?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Most students finish setup in 3–5 minutes: connect your school, answer 3 quick questions about your study style, and Ada builds your week. You\'ll have a full semester plan before your next class.',
+              text: 'Most students finish setup in 3–5 minutes: connect your school, answer 3 quick questions about your study style, and Ada builds your week.',
             },
           },
           {
@@ -84,23 +98,23 @@ export const seoConfig: Record<string, SEOConfig> = {
             name: 'Is the interface sensory-friendly for ADHD or autism?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Yes. You can turn off animations, reduce colors, mute notifications, and switch to a simplified layout. We designed Aqademiq with the input of neurodivergent students, so sensory customization is built-in, not an afterthought.',
+              text: 'Yes. You can turn off animations, reduce colors, mute notifications, and switch to a simplified layout. Sensory customization is built-in, not an afterthought.',
             },
           },
           {
             '@type': 'Question',
-            name: 'How is this different from other study apps?',
+            name: 'How is Aqademiq different from other study apps?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Most study apps are task managers with a study coat of paint. Aqademiq is built on behavioral psychology and adaptive AI. It doesn\'t just list what to do; it explains *why* and *when*, prevents decision paralysis, and feels designed for how students actually think—especially those prone to procrastination or sensory overload.',
+              text: 'Most study apps are task managers with a study coat of paint. Aqademiq is built on behavioral psychology and adaptive AI. It explains why and when to study, prevents decision paralysis, and adapts to how students actually think.',
             },
           },
           {
             '@type': 'Question',
-            name: 'Can I sync my existing calendar and LMS?',
+            name: 'Can I sync my existing calendar and LMS with Aqademiq?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Absolutely. Aqademiq integrates with Google Calendar, Apple Calendar, and most university LMS systems. Import your syllabus directly, and Ada automatically creates tasks and deadlines for you.',
+              text: 'Absolutely. Aqademiq integrates with Google Calendar, Apple Calendar, and most university LMS systems. Import your syllabus directly, and Ada automatically creates tasks and deadlines.',
             },
           },
         ],
@@ -108,106 +122,131 @@ export const seoConfig: Record<string, SEOConfig> = {
     ],
   },
   '/features': {
-    title: 'Features - Student Productivity Tools | Aqademiq',
-    description: 'Discover powerful student productivity features. Smart scheduling, grade tracking, focus tools, and more in one unified productivity hub for students.',
-    keywords: 'student productivity features, academic planning tools, student organization, productivity tools for students, student scheduling app',
+    title: 'Features — AI Study Coach, Smart Planning & ADHD Tools | Aqademiq',
+    description: 'Explore Aqademiq features: AI study coach Ada, smart weekly planning, grade analytics, focus timer, task chunking, and ADHD-friendly accessibility. All in one app.',
+    keywords: 'AI study coach, smart study planner, ADHD study tools, grade tracking app, focus timer for students, task chunking, student productivity features, neurodivergent study app, academic planning features, Pomodoro timer students, study schedule generator, AI academic assistant, college study tools, executive function support, study habit tracker',
     canonical: `${BASE_URL}/features`,
     ogImage: DEFAULT_OG_IMAGE,
     ogType: 'website',
     twitterCard: 'summary_large_image',
-    structuredData: {
-      '@context': 'https://schema.org',
-      '@type': 'WebPage',
-      name: 'Features - Student Productivity Tools | Aqademiq',
-      description: 'Discover powerful student productivity features. Smart scheduling, grade tracking, focus tools, and more in one unified productivity hub for students.',
-      url: `${BASE_URL}/features`,
-      image: DEFAULT_OG_IMAGE,
-      breadcrumb: {
-        '@type': 'BreadcrumbList',
+    structuredData: [
+      {
+        '@context': 'https://schema.org',
+        '@type': 'WebPage',
+        name: 'Aqademiq Features — AI Study Coach, Smart Planning & ADHD Tools',
+        description: 'Complete feature breakdown: AI study coach Ada, smart weekly planning, grade analytics, focus timer, task chunking, and ADHD-friendly design.',
+        url: `${BASE_URL}/features`,
+        image: DEFAULT_OG_IMAGE,
+        speakable: {
+          '@type': 'SpeakableSpecification',
+          cssSelector: ['h1', 'h2', '.feature-description'],
+        },
+        breadcrumb: {
+          '@type': 'BreadcrumbList',
+          itemListElement: [
+            { '@type': 'ListItem', position: 1, name: 'Home', item: `${BASE_URL}/` },
+            { '@type': 'ListItem', position: 2, name: 'Features', item: `${BASE_URL}/features` },
+          ],
+        },
+      },
+      {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        name: 'Aqademiq Features',
+        description: 'All features available in the Aqademiq student productivity platform',
+        numberOfItems: 8,
         itemListElement: [
-          {
-            '@type': 'ListItem',
-            position: 1,
-            name: 'Home',
-            item: `${BASE_URL}/`,
-          },
-          {
-            '@type': 'ListItem',
-            position: 2,
-            name: 'Features',
-            item: `${BASE_URL}/features`,
-          },
+          { '@type': 'ListItem', position: 1, name: 'Smart Weekly Planning', description: 'AI-generated personalized study schedules that adapt in real-time to your progress and priorities.' },
+          { '@type': 'ListItem', position: 2, name: 'AI Study Coach (Ada)', description: 'Personal AI assistant that breaks projects into micro-tasks, suggests optimal study times, and adapts plans.' },
+          { '@type': 'ListItem', position: 3, name: 'Grade Analytics', description: 'Visual dashboards tracking performance across all courses with trend analysis and at-risk alerts.' },
+          { '@type': 'ListItem', position: 4, name: 'Focus Timer', description: 'Customizable Pomodoro-style timer with ambient sounds and distraction blocking for deep work sessions.' },
+          { '@type': 'ListItem', position: 5, name: 'Task Chunking', description: 'Automatically breaks large assignments into smaller, actionable steps to reduce overwhelm.' },
+          { '@type': 'ListItem', position: 6, name: 'Progress Tracking', description: 'Visual progress indicators, streak tracking, and achievement badges to maintain motivation.' },
+          { '@type': 'ListItem', position: 7, name: 'ADHD-Friendly Design', description: 'Sensory-friendly modes, reduced animations, low-distraction layouts, and adaptive notifications.' },
+          { '@type': 'ListItem', position: 8, name: 'Calendar & LMS Integration', description: 'Sync with Google Calendar, Apple Calendar, Canvas, Blackboard, and Moodle.' },
         ],
       },
-    },
+    ],
   },
   '/why-aqademiq': {
-    title: 'Why Students Choose Aqademiq | Student Productivity Platform',
-    description: 'Learn why thousands of students trust Aqademiq as their productivity hub. Built for how students actually work, not how productivity apps think they should.',
-    keywords: 'why productivity app, student productivity solution, academic productivity platform, best productivity app for students',
+    title: 'Why Students Choose Aqademiq Over Other Study Apps | Research-Backed',
+    description: 'Built on procrastination psychology, not just task management. See why ADHD students, neurodivergent learners, and chronic procrastinators trust Aqademiq.',
+    keywords: 'best study app for procrastination, why Aqademiq, ADHD productivity app comparison, neurodivergent study app review, procrastination psychology app, AI study app vs Notion, study planner comparison, best app for executive function, student productivity platform, anti-procrastination tools, behavioral psychology study app, adaptive AI planner, study app for overwhelmed students, ADHD college tools, focus app for students',
     canonical: `${BASE_URL}/why-aqademiq`,
     ogImage: DEFAULT_OG_IMAGE,
     ogType: 'website',
     twitterCard: 'summary_large_image',
-    structuredData: {
-      '@context': 'https://schema.org',
-      '@type': 'WebPage',
-      name: 'Why Students Choose Aqademiq | Student Productivity Platform',
-      description: 'Learn why thousands of students trust Aqademiq as their productivity hub. Built for how students actually work, not how productivity apps think they should.',
-      url: `${BASE_URL}/why-aqademiq`,
-      image: DEFAULT_OG_IMAGE,
-      breadcrumb: {
-        '@type': 'BreadcrumbList',
+    structuredData: [
+      {
+        '@context': 'https://schema.org',
+        '@type': 'WebPage',
+        name: 'Why Students Choose Aqademiq Over Other Study Apps',
+        description: 'Built on procrastination psychology research. See why ADHD students and neurodivergent learners trust Aqademiq over generic task managers.',
+        url: `${BASE_URL}/why-aqademiq`,
+        image: DEFAULT_OG_IMAGE,
+        speakable: {
+          '@type': 'SpeakableSpecification',
+          cssSelector: ['h1', 'h2', '.comparison-text'],
+        },
+        breadcrumb: {
+          '@type': 'BreadcrumbList',
+          itemListElement: [
+            { '@type': 'ListItem', position: 1, name: 'Home', item: `${BASE_URL}/` },
+            { '@type': 'ListItem', position: 2, name: 'Why Aqademiq', item: `${BASE_URL}/why-aqademiq` },
+          ],
+        },
+      },
+      {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        name: 'How Aqademiq Compares to Other Study Apps',
+        description: 'Comparison of Aqademiq with generic productivity tools',
         itemListElement: [
-          {
-            '@type': 'ListItem',
-            position: 1,
-            name: 'Home',
-            item: `${BASE_URL}/`,
-          },
-          {
-            '@type': 'ListItem',
-            position: 2,
-            name: 'Why Aqademiq',
-            item: `${BASE_URL}/why-aqademiq`,
-          },
+          { '@type': 'ListItem', position: 1, name: 'vs. Notion', description: 'Notion is a general workspace requiring manual setup. Aqademiq is purpose-built for students with AI-powered automatic planning.' },
+          { '@type': 'ListItem', position: 2, name: 'vs. Todoist', description: 'Todoist lists tasks. Aqademiq intelligently sequences, prioritizes, and adapts your study plan using behavioral psychology.' },
+          { '@type': 'ListItem', position: 3, name: 'vs. Google Calendar', description: 'Google Calendar shows when things happen. Aqademiq tells you what to study, when, and why — based on deadlines and your patterns.' },
+          { '@type': 'ListItem', position: 4, name: 'vs. Forest / Focus Apps', description: 'Focus apps help during sessions. Aqademiq decides what to focus on. They complement each other; Aqademiq includes a built-in focus timer.' },
         ],
       },
-    },
+    ],
   },
   '/about': {
-    title: 'About Aqademiq | Student Productivity Hub for Academic Success',
-    description: 'Aqademiq helps students achieve academic success through intelligent productivity tools. Learn about our mission to transform student productivity.',
-    keywords: 'about student productivity, academic productivity tools, student productivity platform, productivity hub for students',
+    title: 'About Aqademiq — Built by Students, for Students Who Procrastinate',
+    description: 'Meet the team behind Aqademiq. We built the study app we wished we had — research-backed, ADHD-friendly, and designed to end academic procrastination.',
+    keywords: 'about Aqademiq, Aqademiq team, student startup, ADHD study app creators, neurodivergent app developers, academic productivity company, procrastination research, student-built app, educational technology startup, study app mission',
     canonical: `${BASE_URL}/about`,
     ogImage: DEFAULT_OG_IMAGE,
     ogType: 'website',
     twitterCard: 'summary_large_image',
-    structuredData: {
-      '@context': 'https://schema.org',
-      '@type': 'WebPage',
-      name: 'About Aqademiq | Student Productivity Hub for Academic Success',
-      description: 'Aqademiq helps students achieve academic success through intelligent productivity tools. Learn about our mission to transform student productivity.',
-      url: `${BASE_URL}/about`,
-      image: DEFAULT_OG_IMAGE,
-      breadcrumb: {
-        '@type': 'BreadcrumbList',
-        itemListElement: [
-          {
-            '@type': 'ListItem',
-            position: 1,
-            name: 'Home',
-            item: `${BASE_URL}/`,
-          },
-          {
-            '@type': 'ListItem',
-            position: 2,
-            name: 'About',
-            item: `${BASE_URL}/about`,
-          },
-        ],
+    structuredData: [
+      {
+        '@context': 'https://schema.org',
+        '@type': 'AboutPage',
+        name: 'About Aqademiq — Built by Students, for Students Who Procrastinate',
+        description: 'Meet the team behind Aqademiq. We built the study app we wished we had — research-backed, ADHD-friendly, designed to end academic procrastination.',
+        url: `${BASE_URL}/about`,
+        image: DEFAULT_OG_IMAGE,
+        mainEntity: {
+          '@type': 'Organization',
+          name: 'Aqademiq',
+          url: BASE_URL,
+          logo: `${BASE_URL}/aqademiq-logo.svg`,
+          description: 'AI-powered academic planning platform built on procrastination psychology research. Designed by students, for students.',
+          sameAs: [
+            'https://twitter.com/Aqademiq',
+            'https://www.linkedin.com/company/aqademiq',
+            'https://www.instagram.com/tryaqademiq/',
+          ],
+        },
+        breadcrumb: {
+          '@type': 'BreadcrumbList',
+          itemListElement: [
+            { '@type': 'ListItem', position: 1, name: 'Home', item: `${BASE_URL}/` },
+            { '@type': 'ListItem', position: 2, name: 'About', item: `${BASE_URL}/about` },
+          ],
+        },
       },
-    },
+    ],
   },
 };
 
