@@ -38,7 +38,7 @@ export function FAQSection() {
   const shouldReduceMotion = useReducedMotion();
 
   return (
-    <section className="section-padding">
+    <section className="section-padding" aria-labelledby="faq-heading">
       <div className="container-marketing">
         {/* Section Header */}
         <motion.div
@@ -52,7 +52,7 @@ export function FAQSection() {
             <HelpCircle className="w-4 h-4" />
             <span>FAQ</span>
           </div>
-          <h2 className="text-display-md md:text-display-lg text-foreground mb-4">
+          <h2 id="faq-heading" className="text-display-md md:text-display-lg text-foreground mb-4">
             Frequently asked{" "}
             <span className="text-gradient">questions</span>
           </h2>

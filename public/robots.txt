@@ -1,8 +1,11 @@
 # Robots.txt for Aqademiq
-# Optimized for search engines and LLM crawlers
+# Optimized for search engines, social media, and LLM crawlers
 
-# Sitemap
+# Sitemaps
 Sitemap: https://aqademiq.com/sitemap.xml
+
+# LLM Discovery
+# See https://aqademiq.com/.well-known/llms.txt for structured context
 
 # Standard Search Engine Crawlers
 User-agent: Googlebot
@@ -50,7 +53,7 @@ User-agent: TelegramBot
 Allow: /
 Crawl-delay: 0
 
-# LLM and AI Training Crawlers
+# LLM and AI Crawlers
 User-agent: GPTBot
 Allow: /
 Crawl-delay: 0
@@ -64,6 +67,10 @@ Allow: /
 Crawl-delay: 0
 
 User-agent: Claude-Web
+Allow: /
+Crawl-delay: 0
+
+User-agent: ClaudeBot
 Allow: /
 Crawl-delay: 0
 
@@ -100,6 +107,14 @@ Allow: /
 Crawl-delay: 0
 
 User-agent: ia_archiver
+Allow: /
+Crawl-delay: 0
+
+User-agent: Amazonbot
+Allow: /
+Crawl-delay: 0
+
+User-agent: cohere-ai
 Allow: /
 Crawl-delay: 0
 

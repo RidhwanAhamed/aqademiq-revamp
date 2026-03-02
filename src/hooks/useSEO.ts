@@ -75,6 +75,24 @@ export function useSEO(config: SEOConfig) {
       updateMetaTag('twitter:image:alt', config.title);
     }
 
+    // Dublin Core meta tags (academic crawlers)
+    updateMetaTag('dc.title', config.title);
+    updateMetaTag('dc.description', config.description);
+    updateMetaTag('dc.creator', 'Aqademiq');
+    updateMetaTag('dc.type', 'InteractiveResource');
+    updateMetaTag('dc.format', 'text/html');
+    updateMetaTag('dc.language', 'en');
+
+    // Citation meta tags (academic indexing)
+    updateMetaTag('citation_title', config.title);
+    updateMetaTag('citation_author', 'Aqademiq');
+    updateMetaTag('citation_publication_date', '2026');
+
+    // Article meta tags
+    updateMetaTag('article:author', 'Aqademiq', true);
+    updateMetaTag('article:publisher', BASE_URL, true);
+    updateMetaTag('article:modified_time', new Date().toISOString(), true);
+
     // Canonical URL
     const canonicalUrl = config.canonical || `${BASE_URL}${window.location.pathname}`;
     let canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkElement;
@@ -89,7 +107,6 @@ export function useSEO(config: SEOConfig) {
     const removeExistingStructuredData = () => {
       const existingScripts = document.querySelectorAll('script[type="application/ld+json"]');
       existingScripts.forEach((script) => {
-        // Keep base structured data from index.html, only remove dynamic ones
         const content = script.textContent || '';
         if (content.includes('"@type":"WebPage"') && !content.includes('"@type":"SoftwareApplication"')) {
           script.remove();
@@ -112,10 +129,6 @@ export function useSEO(config: SEOConfig) {
       });
     }
 
-    // Cleanup function
-    return () => {
-      // Note: We don't remove meta tags on cleanup to avoid flickering
-      // The next route change will update them anyway
-    };
+    return () => {};
   }, [config]);
 }
