@@ -13,6 +13,7 @@ export interface SEOConfig {
 }
 
 const BASE_URL = 'https://aqademiq.com';
+const ORGANIZATION_NAME = 'R13 Labs India Private Limited';
 
 export function useSEO(config: SEOConfig) {
   useEffect(() => {
@@ -78,18 +79,18 @@ export function useSEO(config: SEOConfig) {
     // Dublin Core meta tags (academic crawlers)
     updateMetaTag('dc.title', config.title);
     updateMetaTag('dc.description', config.description);
-    updateMetaTag('dc.creator', 'Aqademiq');
+    updateMetaTag('dc.creator', ORGANIZATION_NAME);
     updateMetaTag('dc.type', 'InteractiveResource');
     updateMetaTag('dc.format', 'text/html');
     updateMetaTag('dc.language', 'en');
 
     // Citation meta tags (academic indexing)
     updateMetaTag('citation_title', config.title);
-    updateMetaTag('citation_author', 'Aqademiq');
+    updateMetaTag('citation_author', ORGANIZATION_NAME);
     updateMetaTag('citation_publication_date', '2026');
 
     // Article meta tags
-    updateMetaTag('article:author', 'Aqademiq', true);
+    updateMetaTag('article:author', ORGANIZATION_NAME, true);
     updateMetaTag('article:publisher', BASE_URL, true);
     updateMetaTag('article:modified_time', new Date().toISOString(), true);
 

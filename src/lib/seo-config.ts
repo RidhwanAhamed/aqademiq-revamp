@@ -2,6 +2,8 @@ import { SEOConfig } from '@/hooks/useSEO';
 
 const BASE_URL = 'https://aqademiq.com';
 const DEFAULT_OG_IMAGE = 'https://aqademiq.com/lovable-uploads/322f4c09-269e-4fad-89a5-82e1beb1b42f.png';
+const ORGANIZATION_NAME = 'R13 Labs India Private Limited';
+const SUPPORT_URL = `${BASE_URL}/support`;
 
 export const seoConfig: Record<string, SEOConfig> = {
   '/': {
@@ -26,9 +28,10 @@ export const seoConfig: Record<string, SEOConfig> = {
         },
         publisher: {
           '@type': 'Organization',
-          name: 'Aqademiq',
+          name: ORGANIZATION_NAME,
           url: BASE_URL,
           logo: `${BASE_URL}/aqademiq-logo.svg`,
+          brand: 'Aqademiq',
         },
         mainEntity: {
           '@type': 'SoftwareApplication',
@@ -228,10 +231,19 @@ export const seoConfig: Record<string, SEOConfig> = {
         image: DEFAULT_OG_IMAGE,
         mainEntity: {
           '@type': 'Organization',
-          name: 'Aqademiq',
+          name: ORGANIZATION_NAME,
           url: BASE_URL,
           logo: `${BASE_URL}/aqademiq-logo.svg`,
-          description: 'AI-powered academic planning platform built on procrastination psychology research. Designed by students, for students.',
+          description: 'R13 Labs India Private Limited builds Aqademiq, an AI-powered academic planning platform for students.',
+          brand: {
+            '@type': 'Brand',
+            name: 'Aqademiq',
+          },
+          contactPoint: {
+            '@type': 'ContactPoint',
+            contactType: 'Customer Support',
+            url: SUPPORT_URL,
+          },
           sameAs: [
             'https://twitter.com/Aqademiq',
             'https://www.linkedin.com/company/aqademiq',
@@ -244,6 +256,36 @@ export const seoConfig: Record<string, SEOConfig> = {
             { '@type': 'ListItem', position: 1, name: 'Home', item: `${BASE_URL}/` },
             { '@type': 'ListItem', position: 2, name: 'About', item: `${BASE_URL}/about` },
           ],
+        },
+      },
+    ],
+  },
+  '/support': {
+    title: 'Support — Aqademiq by R13 Labs India Private Limited',
+    description: 'Official Aqademiq support page with contact channels and organization details. Aqademiq is a product of R13 Labs India Private Limited.',
+    keywords: 'Aqademiq support, R13 Labs India Private Limited, Aqademiq contact, Apple developer support URL',
+    canonical: SUPPORT_URL,
+    ogImage: DEFAULT_OG_IMAGE,
+    ogType: 'website',
+    twitterCard: 'summary_large_image',
+    structuredData: [
+      {
+        '@context': 'https://schema.org',
+        '@type': 'ContactPage',
+        name: 'Aqademiq Support',
+        description: 'Official support page for Aqademiq by R13 Labs India Private Limited.',
+        url: SUPPORT_URL,
+        mainEntity: {
+          '@type': 'Organization',
+          name: ORGANIZATION_NAME,
+          url: BASE_URL,
+          brand: 'Aqademiq',
+          contactPoint: {
+            '@type': 'ContactPoint',
+            contactType: 'Customer Support',
+            email: 'tryaqademiq@gmail.com',
+            url: SUPPORT_URL,
+          },
         },
       },
     ],

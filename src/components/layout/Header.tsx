@@ -10,6 +10,7 @@ const navLinks = [
   { name: "Features", href: "/features" },
   { name: "Why Aqademiq", href: "/why-aqademiq" },
   { name: "About", href: "/about" },
+  { name: "Support", href: "/support" },
 ];
 
 export function Header() {

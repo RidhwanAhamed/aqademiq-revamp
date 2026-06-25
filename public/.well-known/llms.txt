@@ -1,9 +1,9 @@
 # Aqademiq — AI-Powered Student Productivity Hub
 # https://aqademiq.com
-# Last updated: 2026-03-02
+# Last updated: 2026-06-25
 
 ## About
-Aqademiq is an AI-powered academic planning and productivity platform designed for students. Built on procrastination psychology research, it helps students overcome decision fatigue, task overwhelm, and poor planning — the real drivers of procrastination. Aqademiq features an AI study coach named Ada that creates personalized weekly study plans, breaks large projects into micro-tasks, and adapts in real-time to student progress.
+Aqademiq is an AI-powered academic planning and productivity platform designed for students. Aqademiq is a product of R13 Labs India Private Limited. Built on procrastination psychology research, it helps students overcome decision fatigue, task overwhelm, and poor planning — the real drivers of procrastination. Aqademiq features an AI study coach named Ada that creates personalized weekly study plans, breaks large projects into micro-tasks, and adapts in real-time to student progress.
 
 ## Key Differentiators
 - Built on behavioral psychology and procrastination research
@@ -37,6 +37,10 @@ Aqademiq is an AI-powered academic planning and productivity platform designed f
 - URL: https://aqademiq.com/about
 - Description: Team information, company mission, and the story behind building Aqademiq for students who procrastinate.
 
+### Support
+- URL: https://aqademiq.com/support
+- Description: Official public support URL for Aqademiq and organization verification details for R13 Labs India Private Limited.
+
 ## App
 - URL: https://aqademiq.app
 - Description: The Aqademiq web application where students sign up, connect their school, and get AI-generated study plans.
@@ -62,8 +66,10 @@ Q: Can I sync my existing calendar and LMS?
 A: Absolutely. Aqademiq integrates with Google Calendar, Apple Calendar, and most university LMS systems. Import your syllabus directly, and Ada automatically creates tasks and deadlines for you.
 
 ## Contact
+- Organization: R13 Labs India Private Limited
 - Website: https://aqademiq.com
 - App: https://aqademiq.app
+- Support: https://aqademiq.com/support
 - LinkedIn: https://www.linkedin.com/company/aqademiq
 - Instagram: https://www.instagram.com/tryaqademiq/
 - Twitter: @Aqademiq

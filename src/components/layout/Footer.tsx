@@ -1,35 +1,32 @@
 import { Link } from "react-router-dom";
 import { Linkedin, Instagram, MessageCircle } from "lucide-react";
 
+// WhatsApp phone number format: country code + number, no "+" or spaces
+const WHATSAPP_NUMBER = "971501292021";
+
 const footerLinks = {
   product: [
-    { name: "Features", href: "#features" },
-    { name: "Pricing", href: "#pricing" },
-    { name: "Roadmap", href: "#roadmap" },
-    { name: "Changelog", href: "#changelog" },
+    { name: "Features", href: "/features" },
+    { name: "Why Aqademiq", href: "/why-aqademiq" },
+    { name: "About", href: "/about" },
+    { name: "Support", href: "/support" },
   ],
   company: [
-    { name: "About", href: "#about" },
-    { name: "Blog", href: "#blog" },
-    { name: "Careers", href: "#careers" },
-    { name: "Contact", href: "#contact" },
+    { name: "R13 Labs India Private Limited", href: "/about" },
+    { name: "Product: Aqademiq", href: "/" },
+    { name: "Contact Support", href: "/support" },
   ],
   resources: [
-    { name: "Documentation", href: "#docs" },
-    { name: "Help Center", href: "#help" },
-    { name: "Community", href: "#community" },
-    { name: "API", href: "#api" },
+    { name: "Support URL", href: "https://aqademiq.com/support" },
+    { name: "App", href: "https://aqademiq.app" },
+    { name: "WhatsApp Support", href: `https://wa.me/${WHATSAPP_NUMBER}` },
+    { name: "Email Support", href: "mailto:tryaqademiq@gmail.com" },
   ],
   legal: [
-    { name: "Privacy", href: "#privacy" },
-    { name: "Terms", href: "#terms" },
-    { name: "Cookies", href: "#cookies" },
+    { name: "Support Policy", href: "/support" },
+    { name: "Organization Details", href: "/about" },
   ],
 };
-
-// WhatsApp phone number - update with actual number (format: country code + number, no + or spaces)
-// Example: 1234567890 for +1 234 567 890
-const WHATSAPP_NUMBER = "+971501292021"; // TODO: Replace with actual WhatsApp number
 
 const socialLinks = [
   { 
@@ -68,11 +65,16 @@ export function Footer() {
             <p className="text-body-sm text-muted-foreground max-w-xs mb-6">
               AI-powered academic planning built on behavioral psychology. Designed for students who procrastinate, with accessibility features neurodivergent students love.
             </p>
+            <p className="text-body-xs text-muted-foreground max-w-xs mb-6">
+              Aqademiq is a product of R13 Labs India Private Limited.
+            </p>
             <div className="flex gap-3">
               {socialLinks.map((social) => (
                 <a
                   key={social.name}
                   href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   aria-label={social.name}
                   className="flex h-9 w-9 items-center justify-center rounded-full bg-muted text-muted-foreground hover:bg-primary hover:text-primary-foreground transition-colors"
                 >
@@ -90,12 +92,9 @@ export function Footer() {
             <ul className="space-y-3">
               {footerLinks.product.map((link) => (
                 <li key={link.name}>
-                  <a
-                    href={link.href}
-                    className="text-body-sm text-muted-foreground hover:text-foreground transition-colors"
-                  >
+                  <Link to={link.href} className="text-body-sm text-muted-foreground hover:text-foreground transition-colors">
                     {link.name}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -108,12 +107,9 @@ export function Footer() {
             <ul className="space-y-3">
               {footerLinks.company.map((link) => (
                 <li key={link.name}>
-                  <a
-                    href={link.href}
-                    className="text-body-sm text-muted-foreground hover:text-foreground transition-colors"
-                  >
+                  <Link to={link.href} className="text-body-sm text-muted-foreground hover:text-foreground transition-colors">
                     {link.name}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -128,6 +124,8 @@ export function Footer() {
                 <li key={link.name}>
                   <a
                     href={link.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="text-body-sm text-muted-foreground hover:text-foreground transition-colors"
                   >
                     {link.name}
@@ -145,13 +143,9 @@ export function Footer() {
           </p>
           <div className="flex gap-6">
             {footerLinks.legal.map((link) => (
-              <a
-                key={link.name}
-                href={link.href}
-                className="text-body-xs text-muted-foreground hover:text-foreground transition-colors"
-              >
+              <Link key={link.name} to={link.href} className="text-body-xs text-muted-foreground hover:text-foreground transition-colors">
                 {link.name}
-              </a>
+              </Link>
             ))}
           </div>
         </div>

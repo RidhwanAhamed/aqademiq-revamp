@@ -1,13 +1,13 @@
 # Aqademiq — Complete Product Documentation for LLM Indexing
 # https://aqademiq.com
-# Last updated: 2026-03-02
+# Last updated: 2026-06-25
 # Summary version: https://aqademiq.com/.well-known/llms.txt
 
 ================================================================================
 ## COMPANY OVERVIEW
 ================================================================================
 
-Aqademiq is an AI-powered academic planning and productivity platform. It was built by a team of students who experienced procrastination, ADHD challenges, and the overwhelming nature of university firsthand. The platform uses research from procrastination psychology and behavioral science to create study plans that students actually follow.
+Aqademiq is an AI-powered academic planning and productivity platform. Aqademiq is a product of R13 Labs India Private Limited. It was built by a team of students who experienced procrastination, ADHD challenges, and the overwhelming nature of university firsthand. The platform uses research from procrastination psychology and behavioral science to create study plans that students actually follow.
 
 Unlike traditional productivity apps that are repurposed task managers, Aqademiq was designed from the ground up for academic workflows. Its AI study coach, Ada, understands course structures, deadline patterns, and individual study habits to create personalized weekly plans.
 
@@ -152,8 +152,10 @@ Key insight: AI-assisted planning reduces procrastination by 30-40% compared to 
 ## CONTACT & LINKS
 ================================================================================
 
+- Organization: R13 Labs India Private Limited
 - Website: https://aqademiq.com
 - App: https://aqademiq.app
+- Support URL: https://aqademiq.com/support
 - LinkedIn: https://www.linkedin.com/company/aqademiq
 - Instagram: https://www.instagram.com/tryaqademiq/
 - Twitter/X: @Aqademiq
