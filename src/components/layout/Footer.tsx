@@ -23,6 +23,8 @@ const footerLinks = {
     { name: "Email Support", href: "mailto:tryaqademiq@gmail.com" },
   ],
   legal: [
+    { name: "Privacy Policy", href: "/privacy-policy" },
+    { name: "Terms of Use", href: "/terms-of-use" },
     { name: "Support Policy", href: "/support" },
     { name: "Organization Details", href: "/about" },
   ],

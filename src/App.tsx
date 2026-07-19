@@ -11,6 +11,8 @@ import Features from "./pages/Features";
 import WhyAqademiq from "./pages/WhyAqademiq";
 import About from "./pages/About";
 import Support from "./pages/Support";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import TermsOfUse from "./pages/TermsOfUse";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -46,6 +48,8 @@ const App = () => (
             <Route path="/why-aqademiq" element={<WhyAqademiq />} />
             <Route path="/about" element={<About />} />
             <Route path="/support" element={<Support />} />
+            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+            <Route path="/terms-of-use" element={<TermsOfUse />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
