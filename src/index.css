@@ -271,6 +271,34 @@
    ═══════════════════════════════════════════════════════════════ */
 
 @layer components {
+  .legal-prose h2 {
+    @apply text-display-sm md:text-display-md mt-10 mb-4 text-foreground;
+  }
+  .legal-prose h3 {
+    @apply text-body-lg font-semibold mt-6 mb-3 text-foreground;
+  }
+  .legal-prose p {
+    @apply text-body-md text-muted-foreground leading-relaxed mb-4;
+  }
+  .legal-prose ol {
+    @apply list-decimal pl-6 space-y-3 mb-4 text-body-md text-muted-foreground;
+  }
+  .legal-prose ul {
+    @apply list-disc pl-6 space-y-2 mb-4 text-body-md text-muted-foreground;
+  }
+  .legal-prose li > p {
+    @apply mb-2;
+  }
+  .legal-prose strong {
+    @apply text-foreground font-semibold;
+  }
+  .legal-prose mark {
+    @apply bg-primary/20 text-foreground px-1 rounded;
+  }
+  .legal-prose section {
+    @apply mb-8;
+  }
+
   @keyframes fade-in {
     from {
       opacity: 0;
